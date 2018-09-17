@@ -1,0 +1,76 @@
+.mobileContainer-inner, .imageWrapper--one, .imageWrapper--two, .imageWrapper--standard {
+  width: 389px;
+  height: 690px; }
+
+.mobile-frame {
+  background: #263238;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0; }
+
+.mobileContainer {
+  width: 465px;
+  height: 923px;
+  overflow-x: scroll;
+  position: relative;
+  background-image: url("../images/iphone-outline.png");
+  background-repeat: no-repeat; }
+
+.mobileContainer-inner {
+  background: white;
+  position: absolute;
+  top: 119px;
+  right: 40px;
+  border-radius: 3px;
+  overflow: hidden; }
+
+.imageWrapper--one, .imageWrapper--two, .imageWrapper--standard {
+  position: absolute;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  top: 0;
+  right: 0; }
+
+.imageWrapper--one {
+  z-index: 100; }
+
+.imageWrapper--two {
+  z-index: 200; }
+
+.imageWrapper--standard {
+  z-index: 300;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s; }
+
+.imageWrapper--standard.ng-enter,
+.imageWrapper--standard.ng-leave.ng-leave-active {
+  opacity: 0; }
+
+.imageWrapper--standard.ng-leave,
+.imageWrapper--standard.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+.slideRightHide {
+  right: calc(389px + 50px); }
+
+.slideRightShow {
+  right: 0; }
+
+.slideLeftHide {
+  left: calc(389px + 50px); }
+
+.slideLeftShow {
+  right: 0; }
+
+.fadeShow {
+  opacity: 1; }
+
+.fadeHide {
+  opacity: 0; }
+
+.appFadeShow {
+  opacity: 1; }
+
+.appFadeHide {
+  opacity: 0; }
