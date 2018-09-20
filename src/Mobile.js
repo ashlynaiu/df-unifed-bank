@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './styles/mobile.css';
-import { Button } from '@salesforce/design-system-react';
 import Chat from './components/Chat';
 
 class Mobile extends Component {
