@@ -27,6 +27,76 @@
   border-radius: 3px;
   overflow: hidden; }
 
+.chat-response-option {
+  border: 1px solid #0070D2;
+  border-radius: 2rem;
+  padding: .5rem 1rem;
+  color: #0070D2;
+  margin-left: 1rem;
+  margin-top: 1rem; }
+
+.imessageApp {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.toolbar-bottom {
+  background-image: url("../images/iMessage-toolbar-bottom.png");
+  width: 100%;
+  height: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0; }
+
+.chat-window {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  padding-bottom: 4rem; }
+
+.chat-window::-webkit-scrollbar {
+  display: none; }
+
+.ab-scheduler {
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  margin-top: 1.5rem; }
+  .ab-scheduler .content {
+    padding: .5rem; }
+    .ab-scheduler .content button {
+      width: 100%;
+      margin: .5rem 0 .5rem;
+      padding: .5rem; }
+  .ab-scheduler .header {
+    background: #FAFAF9;
+    border-radius: .5rem .5rem 0 0;
+    padding: .75rem;
+    text-align: center; }
+    .ab-scheduler .header .heading-title {
+      font-size: 1rem;
+      font-weight: bold; }
+    .ab-scheduler .header .time-zone {
+      display: block;
+      text-align: center; }
+
+.chat-banker-info-image {
+  background-image: url("../images/chat-andrew-collins-banker.png");
+  width: 100%;
+  height: 110px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 1.5rem; }
+
+.chat-cal-event-info {
+  background-image: url("../images/chat-cal-event-info.png");
+  width: 100%;
+  height: 332px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 1.5rem; }
+
 .imageWrapper--one, .imageWrapper--two, .imageWrapper--standard {
   position: absolute;
   transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;

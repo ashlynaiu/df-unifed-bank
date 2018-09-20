@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 
-
 class ChatBubble extends Component{
-  constructor(){
-    super();
-    this.state = {
-    }
-  }
 
   render() {
     return (
@@ -19,11 +13,8 @@ class ChatBubble extends Component{
           </div>
         </div>
       </li>
-
     );
   }
-
-
 }
 
 export default ChatBubble;
