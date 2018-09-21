@@ -54,7 +54,12 @@
   height: 100%;
   width: 100%;
   overflow: scroll;
-  padding-bottom: 4rem; }
+  padding-bottom: 13rem; }
+  .chat-window .hidden {
+    opacity: 0;
+    transform: translateY(2rem) scale(0.8); }
+  .chat-window .hidden-response-options {
+    opacity: 0; }
 
 .chat-window::-webkit-scrollbar {
   display: none; }
