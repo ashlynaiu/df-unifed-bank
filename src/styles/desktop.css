@@ -40,3 +40,8 @@
 
 .account .right {
   width: 29%; }
+
+.client-card {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 4px 1px; }
