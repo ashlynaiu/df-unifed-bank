@@ -5,9 +5,13 @@ import {IconSettings} from '@salesforce/design-system-react';
 
 class ChatABScheduler extends Component{
 
+  handleClick = (event) => {
+    this.props.onButtonClick(event);
+  }
+
   render(){
     return(
-      <div className="ab-scheduler">
+      <div className={"ab-scheduler "  + this.props.animationClass}>
             <div className="header">
             <IconSettings iconPath="/assets/icons">
               <Icon category="utility" name="chevronright"/>
@@ -20,10 +24,10 @@ class ChatABScheduler extends Component{
 
             </div>
             <div className="content">
-              <Button label="9:30 - 10:30am"/>
-              <Button label="10:30 - 11:30am"/>
-              <Button label="11:30am - 12:30pm"/>
-              <Button label="12:30pm - 1:30pm"/>
+              <Button onClick={this.handleClick} label="9:30 - 10:30am"/>
+              <Button onClick={this.handleClick} label="10:30 - 11:30am"/>
+              <Button onClick={this.handleClick} label="11:30am - 12:30pm"/>
+              <Button onClick={this.handleClick} label="12:30pm - 1:30pm"/>
             </div>
           </div>
     )
