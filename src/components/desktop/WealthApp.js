@@ -16,6 +16,11 @@ import clientPanelOne from '../../images/desktop/client-right-panel-one.png';
 
 //Tearsheet
 import tearsheet from '../../images/desktop/tearsheet.png';
+
+//Updated Client View
+import tabs from '../../images/desktop/interactions-tab.png';
+import clientPanelTwo from '../../images/desktop/client-right-panel-two.png';
+import timeline from '../../images/desktop/timeline.png';
 class WealthApp extends Component {
   constructor(props) {
     super(props);
@@ -101,10 +106,29 @@ class WealthApp extends Component {
       )
     }
 
+    let renderClientUpdated = () => {
+      return(
+        <div className="clientPage account">
+          <img src={highlight} alt="" />
+          <div className="flex">
+            <div className="left">
+              <div className="client-card">
+                <img src={tabs} alt="" />
+                <img src={timeline} alt="" />
+              </div>
+            </div>
+            <div className="right">
+              <img src={clientPanelTwo} alt="" />
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     let renderScreenState = () => {
       let demoState = this.state.demoState;
       if(demoState === 1) {
-        return renderHome();
+        return renderClientUpdated();
       }
       else if(demoState === 2){
         return renderClient();

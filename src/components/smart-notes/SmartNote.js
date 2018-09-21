@@ -77,7 +77,7 @@ class SmartNote extends Component {
     return (
         <div className="mobile-frame">
             <div className="mobileContainer">
-                <div className="mobileContainer-inner">
+                <div className="mobileContainer-inner smartnote-background">
                     <img src={StatusBar} alt=""/>
                     <div className="mobileHeader">
                         <Button label="Back" />

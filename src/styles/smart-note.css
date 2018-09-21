@@ -25,9 +25,11 @@
   top: 119px;
   right: 40px;
   border-radius: 3px;
-  background: url("../images/smart-note/sn-background.png") no-repeat #fff bottom;
-  background-size: contain;
   overflow: hidden; }
+
+.smartnote-background {
+  background: url("../images/smart-note/sn-background.png") no-repeat #fff bottom;
+  background-size: contain; }
 
 .mobileHeader {
   padding: 8px;
