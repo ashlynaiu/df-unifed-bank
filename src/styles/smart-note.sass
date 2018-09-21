@@ -8,60 +8,66 @@ $standard-animate: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s
 $fast-animate: 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750)
 
 %inner-frame-dimensions
-	width: $innerFrameWidth
-	height: 690px
+  width: $innerFrameWidth
+  height: 690px
 
 .mobile-frame
-	background: $frame-color
-	height: 100%
-	width: 100%
-	display: flex
-	justify-content: center
-	align-items: center
-	padding: 40px 0
+  background: $frame-color
+  height: 100%
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 40px 0
 
 .mobileContainer
-	width: 465px
-	height: 923px
-	overflow-x: scroll
-	position: relative
-	background-image: url('../images/iphone-outline.png')
-	background-repeat: no-repeat
+  width: 465px
+  height: 923px
+  overflow-x: scroll
+  position: relative
+  background-image: url('../images/iphone-outline.png')
+  background-repeat: no-repeat
 
 .mobileContainer-inner
-	@extend %inner-frame-dimensions
-	background: white
-	position: absolute
-	top: 119px
-	right: 40px
-	border-radius: 3px
-	overflow: hidden
+  @extend %inner-frame-dimensions
+  background: white
+  position: absolute
+  top: 119px
+  right: 40px
+  border-radius: 3px
+  overflow: hidden
 
 .smartnote-background
-	background: url('../images/smart-note/sn-background.png') no-repeat #fff bottom
-	background-size: contain
+  background: url('../images/smart-note/sn-background.png') no-repeat #fff top
+  background-size: contain
 
 .mobileHeader
-	padding: 8px
-	margin-bottom: 12px
-	display: flex
-	justify-content: space-between
-	width: 100%
-	border-bottom: 1px solid #DDDBDA
+  padding: 8px
+  margin-bottom: 12px
+  display: flex
+  justify-content: space-between
+  width: 100%
+  border-bottom: 1px solid #DDDBDA
+  background: #fff
 
-	h1
-		font-size: 18px
+  h1
+    font-size: 18px
+
+.mobileBody
+  padding: 0 8px
 
 .mobileHome
-	position: relative
-	top: 35%
-	transform: translateY(-50%)
+  position: relative
+  top: 40%
+  transform: translateY(-50%)
+  display: flex
+  justify-content: space-around
 
 .successCards
-	margin-bottom: 12px
+  margin-bottom: 12px
 
 .hide-card
-	display: none
+  display: none
 
 .hide-button
-	visibility: hidden
+  visibility: hidden

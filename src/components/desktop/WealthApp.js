@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import GlobalHeader from './GlobalHeader';
 import Icon from '../Icon';
 import '../../styles/desktop.css';
@@ -27,11 +28,14 @@ class WealthApp extends Component {
     this.updateDemoState = this.updateDemoState.bind(this);
     this.openModal = this.openModal.bind(this);
     this.state = {
-      demoState: 1,
+      demoState: [],
       modal: false
     }
   }
 
+  componentDidMount () {
+    return this.setState({demoState: parseInt(this.props.demoState, 10) })
+  }
   updateDemoState(num) {
     let newState = num + 1;
     return this.setState({ demoState: newState });
@@ -97,7 +101,9 @@ class WealthApp extends Component {
               </div>
               <footer class="slds-modal__footer">
                 <button class="slds-button slds-button_neutral">Print</button>
-                <button class="slds-button slds-button_brand">Close</button>
+                <Link to="/smart-note">
+                  <button class="slds-button slds-m-left_small slds-button_brand">Close</button>
+                </Link>
               </footer>
             </div>
           </section>
@@ -114,7 +120,9 @@ class WealthApp extends Component {
             <div className="left">
               <div className="client-card">
                 <img src={tabs} alt="" />
-                <img src={timeline} alt="" />
+                <div className="timeline">
+                  <img src={timeline} alt="" />
+                </div>
               </div>
             </div>
             <div className="right">
@@ -128,13 +136,16 @@ class WealthApp extends Component {
     let renderScreenState = () => {
       let demoState = this.state.demoState;
       if(demoState === 1) {
-        return renderClientUpdated();
+        return renderHome();
       }
       else if(demoState === 2){
         return renderClient();
       }
       else if(demoState === 3){
         return renderTearsheet();
+      }
+      else if(demoState === 4){
+        return renderClientUpdated();
       }
     }
 

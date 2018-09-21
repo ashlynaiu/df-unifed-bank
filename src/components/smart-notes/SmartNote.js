@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import data from './CardInfo';
 import '../../styles/smart-note.css';
 import { Button } from '@salesforce/design-system-react';
@@ -29,6 +30,8 @@ class SmartNote extends Component {
   }
 
   render() {
+    let demoState = this.state.demoState;
+
     let renderMobileHome = () => {
       return (
         <div className="mobileHome" onClick={() => this.updateDemoState(this.state.demoState)}>
@@ -39,7 +42,7 @@ class SmartNote extends Component {
 
     let renderNote = () => {
       return (
-        <div onClick={() => this.updateDemoState(this.state.demoState)}>
+        <div className="mobileBody" onClick={() => this.updateDemoState(this.state.demoState)}>
           <img src={Note} alt="" />
         </div>
       )
@@ -48,7 +51,7 @@ class SmartNote extends Component {
     let renderSuccess = () => {
       let cards = this.state.cards;
       return (
-        <div className="mobileSuccess">
+        <div className="mobileBody">
           {Object
             .keys(cards)
             .map(key => <SuccessCard
@@ -61,8 +64,20 @@ class SmartNote extends Component {
       )
     }
 
+    let renderNextButton = () => {
+      if(demoState === 2) {
+        return (<Button label="Save" variant="brand" onClick={() => this.updateDemoState(this.state.demoState)} />)
+      }
+      else if(demoState === 3) {
+        return (
+          <Link to="/wealth-complete">
+            <Button label="Close" variant="brand" />
+          </Link>
+        )
+      }
+    }
+
     let renderMobileBody = () => {
-      let demoState = this.state.demoState;
       if(demoState === 1) {
         return renderMobileHome();
       }
@@ -83,7 +98,7 @@ class SmartNote extends Component {
                         <Button label="Back" />
                         <h1>New Smart Note</h1>
                         <div className={`${this.state.demoState === 1 ? 'hide-button' : ''}`}>
-                          <Button label={this.state.saveLabel} variant="brand" onClick={() => this.updateDemoState(this.state.demoState)} />
+                          {renderNextButton()}
                         </div>
                     </div>
                     {renderMobileBody()}
