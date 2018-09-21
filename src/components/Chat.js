@@ -249,6 +249,7 @@ class Chat extends Component{
   render() {
     return (
       <div className="imessageApp">
+      <section className="toolbar-top"></section>
         <div className="chat-window">
           <section role="log" className="slds-chat">
             <ul className="slds-chat-list">
