@@ -1,0 +1,65 @@
+////////////////////////////////////
+/////Main Mobile Frame Classes/////
+//////////////////////////////////
+$innerFrameWidth: 389px
+$innerFrameHeight: 690px
+$frame-color: #263238
+$standard-animate: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s
+$fast-animate: 100ms cubic-bezier(0.250, 0.250, 0.750, 0.750)
+
+%inner-frame-dimensions
+    width: $innerFrameWidth
+    height: 690px
+
+.mobile-frame
+    background: $frame-color
+    height: 100%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 40px 0
+
+.mobileContainer
+    width: 465px
+    height: 923px
+    overflow-x: scroll
+    position: relative
+    background-image: url('../images/iphone-outline.png')
+    background-repeat: no-repeat
+
+.mobileContainer-inner
+    @extend %inner-frame-dimensions
+    background: white
+    position: absolute
+    top: 119px
+    right: 40px
+    border-radius: 3px
+    background: url('../images/smart-note/sn-background.png') no-repeat #fff bottom
+    background-size: contain
+    overflow: hidden
+
+.mobileHeader
+  padding: 8px
+  margin-bottom: 12px
+  display: flex
+  justify-content: space-between
+  width: 100%
+  border-bottom: 1px solid #DDDBDA
+
+  h1
+    font-size: 18px
+
+.mobileHome
+  position: relative
+  top: 35%
+  transform: translateY(-50%)
+
+.successCards
+  margin-bottom: 12px
+
+.hide-card
+  display: none
+
+.hide-button
+  visibility: hidden
