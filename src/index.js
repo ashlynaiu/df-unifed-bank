@@ -15,8 +15,9 @@ const Root = () => {
         <Router>
             <div className="App">
                 <Route exact={true} path="/" component={Mobile} />
-                <Route path="/wealth" component={WealthApp} />
+                <Route path="/wealth" component={() => <WealthApp demoState={1} />} />
                 <Route path="/smart-note" component={SmartNote} />
+                <Route path="/wealth-complete" component={() => <WealthApp demoState={4} />} />
                 <Route path="/commercial" component={CommercialApp} />
                 <Route path="/mobile" component={Mobile} />
                 <Route path="/timlinedev" component={Timeline} />

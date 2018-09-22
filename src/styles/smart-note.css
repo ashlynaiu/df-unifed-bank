@@ -28,7 +28,7 @@
   overflow: hidden; }
 
 .smartnote-background {
-  background: url("../images/smart-note/sn-background.png") no-repeat #fff bottom;
+  background: url("../images/smart-note/sn-background.png") no-repeat #fff top;
   background-size: contain; }
 
 .mobileHeader {
@@ -37,14 +37,20 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid #DDDBDA; }
+  border-bottom: 1px solid #DDDBDA;
+  background: #fff; }
   .mobileHeader h1 {
     font-size: 18px; }
 
+.mobileBody {
+  padding: 0 8px; }
+
 .mobileHome {
   position: relative;
-  top: 35%;
-  transform: translateY(-50%); }
+  top: 40%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-around; }
 
 .successCards {
   margin-bottom: 12px; }
