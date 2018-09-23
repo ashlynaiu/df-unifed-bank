@@ -5,16 +5,22 @@
   background-color: #eee
   padding: 2rem
 
+.timeline-holder
+  height: 100%
+  
 
 .timeline-container
   margin: 0 auto
-  background: #fff
-  border-radius: .25rem
-  border: solid 1px #ccc
   min-height: 300px
   max-width: 920px
   min-width: 300px
-  overflow: scroll
+  overflow: hidden
+  position: relative
+  background: #fff
+  border-radius: .25rem
+  border: solid 1px #ccc
+  height: 740px
+  
 
   .header
     padding: .5rem .75rem
@@ -27,6 +33,7 @@
       line-height: 2rem
 
   .time-pane
+    width: 100%
 
     .dates
       padding: .25rem 0
@@ -93,4 +100,96 @@
               width: 100%
               border-radius: 4rem
               margin: .125rem 0
+
+  .event-window
+    overflow: scroll;
+    height: 100%;
+
+  .event-pane
+    width: 100%
+    padding: .5rem
+
+    .event-item
+      width: 100%
+      padding-bottom: .5rem
+      opacity: 0
+      transform: translateY(-20px)
+
+      a
+        color: #1589EE
+
+      .event-header
+        width: 100%
+        padding: .5rem 1rem
+        white-space: nowrap;
+
+        h1
+          color: #1589EE
+          font-weight: bold
+          font-size: 15px
+          padding-left: 0.25rem
+
+        h2
+          color: #2B2826
+          font-weight: bold
+          font-size: 15px
+
+        .dashed-line
+          border-bottom: dashed 1px #979797
+          width: 100%
+          margin: 0 1.5rem .75rem
+
+      .event-line.goals
+          background-color: #56AADF
+
+      .event-line.opportunity
+        background-color: #FAB863
+
+      .event-line.household
+        background-color: #1BAEA0
+
+      .event-line.event
+        background-color: #E97293
+
+      .event-line
+        width: 3px
+        margin-left: 1.7rem
+        margin-right: 1.4rem
+
+      .event-details
+
+        dl 
+          padding-right: 2rem
+
+        dt 
+          color: #706E6B
+          font-size: 12px
+
+        dd 
+          font-size: 12px
+          color: #2B2826
+
+      .related-activities
+        padding: .75rem .75rem 0
+
+        .related-header
+          padding-bottom: .5rem
+
+        span  
+          line-height: 1.75rem
+          padding-left: .5rem
+
+        .related-items
+          border: solid 1px #eee
+          border-radius: .25rem
+          margin-bottom: 0.5rem
+
+          .related-item
+            padding: .25rem 1rem
+
+            span
+              padding-left: .5rem
+
+
+
 
