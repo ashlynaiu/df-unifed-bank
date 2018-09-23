@@ -25,16 +25,16 @@ class Timeline extends Component {
   runAnimation(){
     const dates = document.querySelector('.dates');
     const visualizer = document.querySelector('.visualizer');
-    const allEvents = document.querySelectorAll('.v-event');
+    const allVisulizerEvents = document.querySelectorAll('.v-event');
     const eventItems = document.querySelectorAll('.event-item');
 
     const openVisualizer = () => {
       TweenMax.to(visualizer, .5, {height:'55px', delay:0, ease: Back.easeOut.config(1.7)});
-      TweenMax.staggerFrom(allEvents, .5, {y:"150", ease: Back.easeOut.config(1), delay:.2}, 0.01, showEventItems);
+      TweenMax.staggerFrom(allVisulizerEvents, .5, {y:"150", ease: Back.easeOut.config(1), delay:.2}, 0.01, showEventItems);
     }
 
     const showEventItems = () => {
-      TweenMax.staggerTo(eventItems, .5, {transform: "translateY(0)", opacity:1, ease: Back.easeOut.config(1.7), delay:0}, 0.1);
+      TweenMax.staggerTo(eventItems, .5, {transform: "translateY(0)", opacity:1, ease: Back.easeOut.config(1), delay:0}, 0.1);
     }
     TweenMax.to(dates, .5, {opacity:1, delay:.2, onComplete: openVisualizer});
   }
