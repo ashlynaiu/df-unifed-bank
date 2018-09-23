@@ -1,13 +1,168 @@
 import React, { Component } from 'react';
 import GlobalHeader from './GlobalHeader';
 import '../../styles/desktop.css';
+import { Button } from '@salesforce/design-system-react';
+import { Link } from 'react-router-dom';
+
+//Account Page
+import accountOne from '../../images/desktop/account-one-third.png';
+import accountTwo from '../../images/desktop/account-two-third.png';
+import accountThree from '../../images/desktop/account-three-third.png';
+
+//DCH
+import dch from '../../images/desktop/dch-hub.png';
+import actionListOne from '../../images/desktop/action-list-component-one.png';
+import dchHeader from '../../images/desktop/dch-header.png';
+import dchQuestions from '../../images/desktop/dch-questions.png';
+import dchEinstein from '../../images/desktop/dch-einstein.png';
+import dchSummary from '../../images/desktop/dch-summary.png';
+import dchSchedule from '../../images/desktop/dch-schedule-appointment.png';
+import dchConnected from '../../images/desktop/dch-connected.png';
+
 class CommercialApp extends Component {
+  constructor(props) {
+    super(props);
+    this.updateToSecondState = this.updateToSecondState.bind(this);
+    this.state = {
+      demoState: 1,
+      stateName: 'Business Details'
+    }
+  }
+
+  updateToSecondState() {
+    return this.setState({demoState: 2});
+  }
+
+  updateToThirdState() {
+    return this.setState({
+      demoState: 3,
+      stateName: 'Summary'
+    });
+  }
+
+  updateToFourthState() {
+    return this.setState({
+      demoState: 4,
+      stateName: 'Summary'
+    });
+  }
+
   render() {
+    //Render Account
+    let renderAccount = () => {
+      return(
+        <div className="accountPage">
+          <div className="one-third">
+            <img src={accountOne} alt="" />
+          </div>
+          <div className="two-third">
+            <img src={accountTwo} alt="" />
+          </div>
+          <div className="three-third">
+            <img src={accountThree} alt="" onClick={() => this.updateToSecondState()}/>
+          </div>
+        </div>
+      )
+    }
+
+    //Render DCH Header
+    let renderDCHHeader = () => {
+      return (
+        <div>
+          <div className="dch-tabs">
+            <div className="open-tab">
+              {this.state.stateName}
+            </div>
+          </div>
+          <img src={dchHeader} alt="" />
+        </div>
+      )
+    }
+
+    //Render DCH Footer
+    let renderDCHFooter = () => {
+      if(this.state.demoState <= 3) {
+        return (
+          <div className="dch-footer">
+            <Button label="Close" />
+            <Button label="Finish" variant="brand" onClick={() => this.updateToThirdState()}/>
+          </div>
+        )
+      }
+      if(this.state.demoState > 3) {
+        return (
+          <div className="dch-footer">
+            <Button label="Close" />
+            <Link to="/wealth">
+              <Button label="Finish" variant="brand" />
+            </Link>
+          </div>
+        )
+      }
+    }
+
+    //Render DCH Body
+    let renderDCHBody = () => {
+      if(this.state.demoState === 2) {
+        return (
+          <div className="dch-questions"><img src={dchQuestions} alt="" /></div>
+        )
+      }
+      else if (this.state.demoState === 3) {
+        return (
+          <div className="dch-einstein" onClick={() => this.updateToFourthState()}><img src={dchEinstein} alt="" /></div>
+        )
+      }
+      else if (this.state.demoState >= 4) {
+        return (
+          <div className="dch-summary">
+            <div className="sub-left">
+              <img src={dchSummary} alt="" />
+            </div>
+            <div className="sub-right">
+              <img scr={dchSchedule} alt="" />
+              <img scr={dchConnected} alt="" />
+            </div>
+          </div>
+        )
+      }
+    }
+
+    //Render DCH UI
+    let renderDCH = () => {
+      return(
+        <div className="dch">
+          <div className="left">
+            <img src={dch} alt="" />
+            <img src={actionListOne} alt="" className="slds-m-top_medium"/>
+          </div>
+          <div className="right">
+            {renderDCHHeader()}
+            <div className="dch-body">
+              {renderDCHBody()}
+              {renderDCHFooter()}
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    //Decide Account vs DCH
+    let renderScreenState = () => {
+      let demoState = this.state.demoState;
+      if(demoState === 1) {
+        return renderAccount();
+      }
+      else if (demoState >= 2) {
+        return renderDCH();
+      }
+    }
+
     return (
         <div className="desktop">
             <GlobalHeader screen="commercialAccount" />
             <div className="desktopBody">
-            <h1>CommercialApp</h1>
+              {renderScreenState()}
             </div>
         </div>
     );
