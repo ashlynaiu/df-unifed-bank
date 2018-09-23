@@ -8,6 +8,7 @@ import SmartNote from './components/smart-notes/SmartNote';
 import registerServiceWorker from './registerServiceWorker';
 import '@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.css';
 import './styles/common.css';
+import Timeline from './components/desktop/Timeline';
 
 const Root = () => {
     return (
@@ -18,7 +19,7 @@ const Root = () => {
                 <Route path="/smart-note" component={SmartNote} />
                 <Route path="/wealth-complete" component={() => <WealthApp demoState={4} />} />
                 <Route path="/commercial" component={CommercialApp} />
-                
+                <Route path="/timlinedev" component={Timeline} />
             </div>
         </Router>
     )
