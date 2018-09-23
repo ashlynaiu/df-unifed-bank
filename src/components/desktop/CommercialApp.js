@@ -170,9 +170,7 @@ class CommercialApp extends Component {
         <div className="dch">
           <div className="left">
             <img src={dch} alt="" className="slds-m-bottom_medium" />
-            <div className="dch-hub">
-              <img src={actionListImage} alt="" />
-            </div>
+            <img src={actionListImage} alt="" className="dch-hub"/>
           </div>
           <div className="right">
             {renderDCHHeader()}
@@ -195,9 +193,18 @@ class CommercialApp extends Component {
       }
     }
 
+    //Decide State Header
+    let renderStateHeader = () => {
+      if(demoState === 1) {
+        return 'commercialAccount';
+      }
+      else if(demoState > 1) {
+        return 'commercialDCH';
+      }
+    }
     return (
         <div className="desktop">
-            <GlobalHeader screen="commercialAccount" />
+            <GlobalHeader screen={renderStateHeader()} />
             <div className="desktopBody">
               {renderScreenState()}
             </div>
