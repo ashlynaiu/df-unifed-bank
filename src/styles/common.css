@@ -12,7 +12,7 @@
   border-radius: none; }
 
 html, body {
-  height: 100%;
+  height: auto;
   font-family: 'Salesforce Sans', 'Open Sans', sans-serif;
   color: #3e3e3c; }
 

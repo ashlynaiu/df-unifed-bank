@@ -36,6 +36,7 @@ class WealthApp extends Component {
   componentDidMount () {
     return this.setState({demoState: parseInt(this.props.demoState, 10) })
   }
+
   updateDemoState(num) {
     let newState = num + 1;
     return this.setState({ demoState: newState });
