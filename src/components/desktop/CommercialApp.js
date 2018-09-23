@@ -12,17 +12,23 @@ import accountThree from '../../images/desktop/account-three-third.png';
 //DCH
 import dch from '../../images/desktop/dch-hub.png';
 import actionListOne from '../../images/desktop/action-list-component-one.png';
+import actionListTwo from '../../images/desktop/action-list-component-two.png';
+import actionListThree from '../../images/desktop/action-list-component-three.png';
 import dchHeader from '../../images/desktop/dch-header.png';
 import dchQuestions from '../../images/desktop/dch-questions.png';
 import dchEinstein from '../../images/desktop/dch-einstein.png';
 import dchSummary from '../../images/desktop/dch-summary.png';
-import dchSchedule from '../../images/desktop/dch-schedule-appointment.png';
+import dchScheduled from '../../images/desktop/dch-schedule-appointment.png';
 import dchConnected from '../../images/desktop/dch-connected.png';
+import dchAppointment from '../../images/desktop/dch-appointment.png';
+
 
 class CommercialApp extends Component {
   constructor(props) {
     super(props);
     this.updateToSecondState = this.updateToSecondState.bind(this);
+    this.updateToThirdState = this.updateToThirdState.bind(this);
+    this.updateDemoState = this.updateDemoState.bind(this);
     this.state = {
       demoState: 1,
       stateName: 'Business Details'
@@ -40,15 +46,14 @@ class CommercialApp extends Component {
     });
   }
 
-  updateToFourthState() {
-    return this.setState({
-      demoState: 4,
-      stateName: 'Summary'
-    });
+  updateDemoState(num) {
+    let newState = num + 1;
+    return this.setState({ demoState: newState });
   }
 
   render() {
     //Render Account
+    const demoState = this.state.demoState;
     let renderAccount = () => {
       return(
         <div className="accountPage">
@@ -79,9 +84,42 @@ class CommercialApp extends Component {
       )
     }
 
+    //Render DCH Appointment Booking
+    let renderDCHSchedule = () => {
+      if(demoState === 4){
+        return (
+          <div className="sub-right">
+            <img src={dchScheduled} alt="" onClick={() => this.updateDemoState(demoState)}/>
+            <img src={dchConnected} alt="" />
+          </div>
+        )
+      }
+      else if(demoState === 5) {
+        return (
+          <div className="sub-right">
+            <img src={dchAppointment} alt="" />
+            <img src={dchConnected} alt="" />
+          </div>
+        )
+      }
+    }
+
+    //Render DCH Action List Component
+    let renderDCHHub = () => {
+      if(demoState === 2) {
+        return actionListOne;
+      }
+      else if (demoState === 3) {
+        return actionListTwo;
+      }
+      else if (demoState >= 4) {
+        return actionListThree;
+      }
+    }
+
     //Render DCH Footer
     let renderDCHFooter = () => {
-      if(this.state.demoState <= 3) {
+      if(demoState <= 3) {
         return (
           <div className="dch-footer">
             <Button label="Close" />
@@ -89,7 +127,7 @@ class CommercialApp extends Component {
           </div>
         )
       }
-      if(this.state.demoState > 3) {
+      if(demoState > 3) {
         return (
           <div className="dch-footer">
             <Button label="Close" />
@@ -103,26 +141,23 @@ class CommercialApp extends Component {
 
     //Render DCH Body
     let renderDCHBody = () => {
-      if(this.state.demoState === 2) {
+      if(demoState === 2) {
         return (
           <div className="dch-questions"><img src={dchQuestions} alt="" /></div>
         )
       }
-      else if (this.state.demoState === 3) {
+      else if (demoState === 3) {
         return (
-          <div className="dch-einstein" onClick={() => this.updateToFourthState()}><img src={dchEinstein} alt="" /></div>
+          <div className="dch-einstein" onClick={() => this.updateDemoState(demoState)}><img src={dchEinstein} alt="" /></div>
         )
       }
-      else if (this.state.demoState >= 4) {
+      else if (demoState >= 4) {
         return (
           <div className="dch-summary">
             <div className="sub-left">
               <img src={dchSummary} alt="" />
             </div>
-            <div className="sub-right">
-              <img scr={dchSchedule} alt="" />
-              <img scr={dchConnected} alt="" />
-            </div>
+            {renderDCHSchedule()}
           </div>
         )
       }
@@ -130,11 +165,14 @@ class CommercialApp extends Component {
 
     //Render DCH UI
     let renderDCH = () => {
+      let actionListImage = renderDCHHub();
       return(
         <div className="dch">
           <div className="left">
-            <img src={dch} alt="" />
-            <img src={actionListOne} alt="" className="slds-m-top_medium"/>
+            <img src={dch} alt="" className="slds-m-bottom_medium" />
+            <div className="dch-hub">
+              <img src={actionListImage} alt="" />
+            </div>
           </div>
           <div className="right">
             {renderDCHHeader()}
@@ -149,7 +187,6 @@ class CommercialApp extends Component {
 
     //Decide Account vs DCH
     let renderScreenState = () => {
-      let demoState = this.state.demoState;
       if(demoState === 1) {
         return renderAccount();
       }
