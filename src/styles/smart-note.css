@@ -46,13 +46,13 @@
   padding: 0 8px; }
   .mobileBody .fade-enter-done {
     visibility: hidden; }
-  .mobileBody.hide-card {
-    display: none; }
+    .mobileBody .fade-enter-done.hide-card {
+      display: none; }
   .mobileBody .fade-enter {
-    opacity: 1; }
+    height: 270px; }
   .mobileBody .fade-enter-active {
-    opacity: 0;
-    transition: opacity 300ms ease-in; }
+    height: 0px;
+    transition: all 300ms ease-in-out; }
 
 .mobileHome {
   position: relative;

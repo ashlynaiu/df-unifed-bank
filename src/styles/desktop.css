@@ -76,6 +76,12 @@
     background: #ffffff;
     border-radius: 4px;
     border: 1px solid #DDDBDA; }
+  .dch .fade-appear {
+    opacity: 0;
+    index: 1; }
+  .dch .fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out; }
 
 .dch-tabs {
   background: #F3F2F2; }
@@ -99,7 +105,7 @@
 .dch-body {
   height: 75%;
   background: url("../images/desktop/dch-background.png") no-repeat;
-  background-size: contain; }
+  background-size: cover; }
 
 .dch-questions {
   position: relative;

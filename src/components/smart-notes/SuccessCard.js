@@ -42,7 +42,7 @@ class SuccessCard extends Component {
     return (
       <CSSTransition 
         in={this.state.in} 
-        timeout={500} 
+        timeout={300} 
         classNames="fade" 
         onEntered={() => {
           this.setState({
