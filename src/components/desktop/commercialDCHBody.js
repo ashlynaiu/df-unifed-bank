@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from '@salesforce/design-system-react';
-import { Link } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 //DCH
 import dchQuestions from '../../images/desktop/dch-questions.png';
@@ -15,26 +12,6 @@ import dchAppointment from '../../images/desktop/dch-appointment.png';
 class CommercialDCHBody extends Component {
   render() {
     const { updateDemoState, demoState } = this.props;
-    console.log(demoState)
-    //Render DCH Appointment Booking
-    let renderDCHSchedule = () => {
-      if(demoState === 4){
-        return (
-          <div className="sub-right">
-            <img src={dchScheduled} alt="" onClick={() => updateDemoState(demoState)}/>
-            <img src={dchConnected} alt="" />
-          </div>
-        )
-      }
-      else if(demoState === 5) {
-        return (
-          <div className="sub-right">
-            <img src={dchAppointment} alt="" />
-            <img src={dchConnected} alt="" />
-          </div>
-        )
-      }
-    }
 
     //Render DCH Body
     let renderDCHBody = () => {
@@ -56,6 +33,26 @@ class CommercialDCHBody extends Component {
               </div>
               {renderDCHSchedule()}
             </div>
+        )
+      }
+    }
+
+     //Render DCH Appointment Booking
+     let renderDCHSchedule = () => {
+      if(demoState === 4){
+        return (
+          <div className="sub-right">
+            <img src={dchScheduled} alt="" onClick={() => updateDemoState(demoState)}/>
+            <img src={dchConnected} alt="" />
+          </div>
+        )
+      }
+      else if(demoState === 5) {
+        return (
+          <div className="sub-right">
+            <img src={dchAppointment} alt="" />
+            <img src={dchConnected} alt="" />
+          </div>
         )
       }
     }

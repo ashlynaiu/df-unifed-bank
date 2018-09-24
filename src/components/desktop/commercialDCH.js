@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button } from '@salesforce/design-system-react';
 import { Link } from 'react-router-dom';
 import CommercialDCHBody from './commercialDCHBody';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 //DCH
 import dch from '../../images/desktop/dch-hub.png';
@@ -15,7 +14,6 @@ import actionListThree from '../../images/desktop/action-list-component-three.pn
 class CommercialDCH extends Component {
   render() {
     const { updateDemoState, stateName, demoState } = this.props;
-    console.log(demoState)
     //Render DCH Action List Component
     let renderDCHHub = () => {
       if(demoState === 2) {

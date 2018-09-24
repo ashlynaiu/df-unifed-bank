@@ -14,8 +14,7 @@ class CommercialApp extends Component {
     this.updateDemoState = this.updateDemoState.bind(this);
     this.state = {
       demoState: 1,
-      stateName: 'Business Details',
-      finalTransition: false
+      stateName: 'Business Details'
     }
   }
 
@@ -23,9 +22,8 @@ class CommercialApp extends Component {
     let newState = num + 1;
     if (newState === 3){
       return this.setState({
-        demoState: 3,
+        demoState: newState,
         stateName: 'Summary',
-        appearScreen: true
       });
     }
     return this.setState({ demoState: newState });
@@ -52,7 +50,6 @@ class CommercialApp extends Component {
 
     //Render DCH
     let renderDCH = () => {
-      console.log(demoState);
       return ( <CommercialDCH demoState={this.state.demoState} updateDemoState={this.updateDemoState} stateName={this.state.stateName} /> );
     }
 
@@ -66,12 +63,12 @@ class CommercialApp extends Component {
       }
     }
     return (
-        <div className="desktop">
-            <GlobalHeader screen={renderStateHeader()} />
-            <div className="desktopBody">
-              {demoState > 1 ? renderDCH() : renderAccount()}
-            </div>
-        </div>
+      <div className="desktop">
+          <GlobalHeader screen={renderStateHeader()} />
+          <div className="desktopBody">
+            {demoState > 1 ? renderDCH() : renderAccount()}
+          </div>
+      </div>
     );
   }
 }
