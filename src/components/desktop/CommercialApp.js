@@ -3,6 +3,7 @@ import GlobalHeader from './GlobalHeader';
 import '../../styles/desktop.css';
 import { Button } from '@salesforce/design-system-react';
 import { Link } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 //Account Page
 import accountOne from '../../images/desktop/account-one-third.png';
@@ -35,6 +36,10 @@ class CommercialApp extends Component {
     }
   }
 
+  // toggleEnterState = () => {
+  //   this.setState({ in: !this.state.in });
+  // }
+
   updateToSecondState() {
     return this.setState({demoState: 2});
   }
@@ -42,7 +47,8 @@ class CommercialApp extends Component {
   updateToThirdState() {
     return this.setState({
       demoState: 3,
-      stateName: 'Summary'
+      stateName: 'Summary',
+      appearScreen: true
     });
   }
 
@@ -143,22 +149,28 @@ class CommercialApp extends Component {
     let renderDCHBody = () => {
       if(demoState === 2) {
         return (
-          <div className="dch-questions"><img src={dchQuestions} alt="" /></div>
+          <CSSTransition in={true} timeout={800} appear={true} classNames="fade" unmountOnExit>
+            <div className="dch-questions"><img src={dchQuestions} alt="" /></div>
+          </CSSTransition>
         )
       }
       else if (demoState === 3) {
         return (
-          <div className="dch-einstein" onClick={() => this.updateDemoState(demoState)}><img src={dchEinstein} alt="" /></div>
+          <CSSTransition timeout={800} in={demoState === 3} appear={true} classNames="fade">
+            <div className="dch-einstein" onClick={() => this.updateDemoState(demoState)}><img src={dchEinstein} alt="" /></div>
+          </CSSTransition>
         )
       }
       else if (demoState >= 4) {
         return (
-          <div className="dch-summary">
-            <div className="sub-left">
-              <img src={dchSummary} alt="" />
+          <CSSTransition timeout={800} classNames="fade">
+            <div className="dch-summary">
+              <div className="sub-left">
+                <img src={dchSummary} alt="" />
+              </div>
+              {renderDCHSchedule()}
             </div>
-            {renderDCHSchedule()}
-          </div>
+          </CSSTransition>
         )
       }
     }
@@ -167,19 +179,19 @@ class CommercialApp extends Component {
     let renderDCH = () => {
       let actionListImage = renderDCHHub();
       return(
-        <div className="dch">
-          <div className="left">
-            <img src={dch} alt="" className="slds-m-bottom_medium" />
-            <img src={actionListImage} alt="" className="dch-hub"/>
-          </div>
-          <div className="right">
-            {renderDCHHeader()}
-            <div className="dch-body">
-              {renderDCHBody()}
-              {renderDCHFooter()}
+          <div className="dch">
+              <div className="left">
+                <img src={dch} alt="" className="slds-m-bottom_medium" />
+                <img src={actionListImage} alt="" className="dch-hub"/>
+              </div>
+            <div className="right">
+              {renderDCHHeader()}
+              <div className="dch-body">
+                {renderDCHBody()}
+                {renderDCHFooter()}
+              </div>
             </div>
           </div>
-        </div>
       )
     }
 

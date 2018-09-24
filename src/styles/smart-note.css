@@ -44,6 +44,15 @@
 
 .mobileBody {
   padding: 0 8px; }
+  .mobileBody .fade-enter-done {
+    visibility: hidden; }
+  .mobileBody.hide-card {
+    display: none; }
+  .mobileBody .fade-enter {
+    opacity: 1; }
+  .mobileBody .fade-enter-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in; }
 
 .mobileHome {
   position: relative;
