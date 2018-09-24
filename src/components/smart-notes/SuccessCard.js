@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { CSSTransition } from 'react-transition-group';
+
 import Opportunity from '../../images/smart-note/success-opportunity.png';
 import Household from '../../images/smart-note/success-household.png';
 import Goal from '../../images/smart-note/success-goal.png';
@@ -10,17 +12,16 @@ class SuccessCard extends Component {
     super(props);
     this.hideCard = this.hideCard.bind(this);
     this.state = {
-      active: this.props.active
+      active: this.props.active,
+      in: false
     }
   }
-
   hideCard() {
-    return this.setState({active: !this.state.active})
+    this.setState({ in: true });
   }
 
   render() {
     const { image } = this.props;
-    console.log(image)
     let chooseImage = () => {
       if (image === 'Opportunity') {
         return (<img src={Opportunity} alt="" />)
@@ -39,9 +40,20 @@ class SuccessCard extends Component {
       }
     }
     return (
+      <CSSTransition 
+        in={this.state.in} 
+        timeout={300} 
+        classNames="fade" 
+        onEntered={() => {
+          this.setState({
+            active: false
+          });
+        }}
+      >
         <div className={`successCards ${this.state.active ? '' : 'hide-card'}`} onClick={() => this.hideCard()}>
             {chooseImage()}
         </div>
+      </CSSTransition>
     );
   }
 }

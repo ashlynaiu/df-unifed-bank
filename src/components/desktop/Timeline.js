@@ -49,7 +49,6 @@ class Timeline extends Component {
               <div className="slds-spinner__dot-b"></div>
             </div>
           </div>
-          
       )
     }
     const renderTimeline = () => {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import GlobalHeader from './GlobalHeader';
 import Icon from '../Icon';
+import Timeline from '../desktop/Timeline';
 import '../../styles/desktop.css';
 
 //Homepage Images
@@ -21,7 +22,6 @@ import tearsheet from '../../images/desktop/tearsheet.png';
 //Updated Client View
 import tabs from '../../images/desktop/interactions-tab.png';
 import clientPanelTwo from '../../images/desktop/client-right-panel-two.png';
-import timeline from '../../images/desktop/timeline.png';
 class WealthApp extends Component {
   constructor(props) {
     super(props);
@@ -36,6 +36,7 @@ class WealthApp extends Component {
   componentDidMount () {
     return this.setState({demoState: parseInt(this.props.demoState, 10) })
   }
+
   updateDemoState(num) {
     let newState = num + 1;
     return this.setState({ demoState: newState });
@@ -121,7 +122,7 @@ class WealthApp extends Component {
               <div className="client-card">
                 <img src={tabs} alt="" />
                 <div className="timeline">
-                  <img src={timeline} alt="" />
+                  <Timeline />
                 </div>
               </div>
             </div>

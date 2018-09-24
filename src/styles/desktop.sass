@@ -83,11 +83,11 @@ $break-large: 1260px
 .desktop
 	height: 100%
 	min-width: 1200px
+  background-color: #AEC4DD
 
 .desktopBody
 	background: url('../images/desktop/desktop-background.png') no-repeat
 	background-size: cover
-	height: 100%
 	padding: 16px 16px 20px 20px
 
 .HeaderImage
@@ -139,3 +139,94 @@ $break-large: 1260px
 
 .timeline
   padding: 8px
+
+/////////////////////
+/////Commercial/////
+///////////////////
+
+.accountPage
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+  width: 100%
+  .one-third
+    width: 24%
+  .two-third
+    width: 50%
+  .three-third
+    width: 24%
+
+.dch
+  display: flex
+  justify-content: space-between
+  .left
+    width: 25%
+    background: #ffffff
+    border-radius: 4px
+    padding: 24px
+    border: 1px solid #DDDBDA
+
+  .right
+    width: 74%
+    position: relative
+    background: #ffffff
+    border-radius: 4px
+    border: 1px solid #DDDBDA
+
+  .fade-appear
+    opacity: 0
+    index: 1
+
+  .fade-appear.fade-appear-active
+    opacity: 1
+    transition: opacity 300ms ease-in-out
+
+.dch-tabs
+  background: #F3F2F2
+  .open-tab
+    background: #ffffff
+    padding: 12px 18px
+    display: inline-block
+  img
+    display: block
+
+.dch-footer
+  display: flex
+  width: 100%
+  padding: 12px 16px
+  justify-content: space-between
+  background: #F3F2F2
+  border-top: 1px solid #E5E3E3
+  position: absolute
+  bottom: 0
+
+.dch-body
+  height: 75%
+  background: url('../images/desktop/dch-background.png') no-repeat
+  background-size: cover
+
+.dch-questions
+  position: relative
+  top: 30%
+  transform: translateY(-50%)
+  padding: 0 30px
+  img
+    width: 95%
+
+.dch-einstein
+  position: relative
+  top: 40%
+  transform: translateY(-50%)
+  img
+    width: 75%
+    margin: 0 auto
+    display: block
+
+.dch-summary
+  display: flex
+  justify-content: space-between
+  padding: 12px
+  .sub-left
+    width: 60%
+  .sub-right
+    width: 38%

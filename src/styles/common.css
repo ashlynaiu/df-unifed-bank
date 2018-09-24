@@ -3,7 +3,8 @@
   src: url("../fonts/SalesforceSans-Regular.ttf"); }
 
 #root {
-  height: 100%; }
+  height: 100%;
+  background: #AFC5DE; }
 
 * {
   margin: 0;
