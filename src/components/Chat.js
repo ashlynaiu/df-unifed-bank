@@ -5,9 +5,6 @@ import ChatABScheduler from './ChatABScheduler';
 import TweenMax,  { Back } from 'gsap';
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-// import scrollTo from '../node_modules/gsap/ScrollToPlugin';
-
-
 class Chat extends Component{
   constructor(props) {
     super(props);
@@ -129,7 +126,7 @@ class Chat extends Component{
     
 
     TweenMax.to(firstChatResponses, 0, {display:"none"});
-    TweenMax.to(chatWindow, .8, {scrollTo: 350, delay:1});
+    TweenMax.to(chatWindow, .8, {scrollTo: 400, delay:1});
     let config = {
       "element": firstSelectedOption,
       "botIsTyping": false,
@@ -214,7 +211,7 @@ class Chat extends Component{
     const chatCalEventInfo = document.querySelector('.chatCalEventInfo');
 
     TweenMax.to(secondChatResponses, 0, {display:"none"});
-    TweenMax.to(chatWindow, .8, {scrollTo: 600, delay:.5});
+    TweenMax.to(chatWindow, .8, {scrollTo: 700, delay:.5});
     let config = {
       "element": bankerConfimationResponse,
       "botIsTyping": false,
@@ -273,7 +270,7 @@ class Chat extends Component{
               <ChatABScheduler onButtonClick={this.handleSchedulerClick} animationClass="abScheduler hidden ascending" />
               <ChatBubble animationClass="selectedAppointment hidden ascending" boundClass="outbound" chatLabel="Sure!"/>
 
-              <ChatBubble animationClass="sixthTypingBubble hidden ascending" botTyping={this.state.sixthTypingBubble} boundClass="inbound" chatLabel="You will be meeting with Andrew Collins"/>
+              <ChatBubble animationClass="sixthTypingBubble hidden ascending" botTyping={this.state.sixthTypingBubble} boundClass="inbound" chatLabel="You will be meeting with Pamela Hannett"/>
 
               <div className="chatBankerInfoImage hidden ascending chat-banker-info-image"></div>
 

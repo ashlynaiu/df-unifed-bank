@@ -10,6 +10,14 @@ import dchAppointment from '../../images/desktop/dch-appointment.png';
 
 
 class CommercialDCHBody extends Component {
+
+  componentDidMount(){
+    const { callAnimation } = this.props;
+    const delay = .3;
+    callAnimation(delay);
+    
+  }
+
   render() {
     const { updateDemoState, demoState } = this.props;
 
@@ -70,7 +78,7 @@ class CommercialDCHBody extends Component {
     }
 
     return (
-      <div className={`dch-${bodyClass()}`}>{renderDCHBody()}</div>
+      <div className={`dch-body-content dch-${bodyClass()}`}>{renderDCHBody()}</div>
     );
   }
 }
