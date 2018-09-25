@@ -40,10 +40,10 @@ class SuccessCard extends Component {
       }
     }
     return (
-      <CSSTransition 
-        in={this.state.in} 
-        timeout={300} 
-        classNames="fade" 
+      <CSSTransition
+        in={this.state.in}
+        timeout={300}
+        classNames="fade"
         onEntered={() => {
           this.setState({
             active: false
