@@ -4,12 +4,28 @@
     min-width-background-color: #AEC4DD; }
 
 .desktopBody {
+  top: 130px;
+  position: relative;
+  min-height: calc(100% - 130px);
   background: url("../images/desktop/desktop-background.png") no-repeat;
   background-size: cover;
   padding: 16px 16px 20px 20px; }
 
+.desktopBody.noTabs {
+  top: 90px;
+  min-height: calc(100% - 90px); }
+
 .HeaderImage img {
   width: 100%; }
+
+.icon-color-override svg {
+  fill: #fff; }
+
+.icon-override-account svg {
+  fill: #706e6b; }
+
+.slds-icon_container.icon-override-account .slds-icon_container {
+  background-color: transparent; }
 
 .home {
   display: flex;
