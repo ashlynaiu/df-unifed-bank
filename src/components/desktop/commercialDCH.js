@@ -13,7 +13,7 @@ import actionListThree from '../../images/desktop/action-list-component-three.pn
 
 class CommercialDCH extends Component {
   render() {
-    const { updateDemoState, stateName, demoState } = this.props;
+    const { updateDemoState, callAnimation, stateName, demoState } = this.props;
     //Render DCH Action List Component
     let renderDCHHub = () => {
       if(demoState === 2) {
@@ -74,7 +74,7 @@ class CommercialDCH extends Component {
         <div className="right">
           {renderDCHHeader()}
           <div className="dch-body">
-            <CommercialDCHBody demoState={demoState} updateDemoState={updateDemoState} />
+            <CommercialDCHBody callAnimation={callAnimation} demoState={demoState} updateDemoState={updateDemoState} />
             {renderDCHFooter()}
           </div>
         </div>
