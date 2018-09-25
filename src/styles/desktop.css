@@ -60,6 +60,8 @@
     width: 50%; }
   .accountPage .three-third {
     width: 24%; }
+    .accountPage .three-third img {
+      cursor: pointer; }
 
 .dch {
   display: flex;
@@ -109,16 +111,18 @@
 
 .dch-questions {
   position: relative;
-  top: 30%;
-  transform: translateY(-50%);
-  padding: 0 30px; }
+  top: 10%;
+  padding: 0 30px;
+  background-image: none;
+  opacity: 0;
+  transform: translateY(10%); }
   .dch-questions img {
-    width: 95%; }
+    width: 100%; }
 
 .dch-einstein {
   position: relative;
-  top: 40%;
-  transform: translateY(-50%); }
+  top: 10%;
+  background-image: none; }
   .dch-einstein img {
     width: 75%;
     margin: 0 auto;

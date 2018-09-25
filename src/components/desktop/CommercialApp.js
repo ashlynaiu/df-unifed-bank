@@ -6,7 +6,7 @@ import CommercialDCH from './commercialDCH';
 import accountOne from '../../images/desktop/account-one-third.png';
 import accountTwo from '../../images/desktop/account-two-third.png';
 import accountThree from '../../images/desktop/account-three-third.png';
-
+import TweenMax,  { Back } from 'gsap';
 
 class CommercialApp extends Component {
   constructor(props) {
@@ -18,15 +18,38 @@ class CommercialApp extends Component {
     }
   }
 
-  updateDemoState(num) {
+  updateState = (num) => {
     let newState = num + 1;
     if (newState === 3){
+      this.handleAnimationIn();
       return this.setState({
         demoState: newState,
         stateName: 'Summary',
       });
     }
+    this.handleAnimationIn();
     return this.setState({ demoState: newState });
+  }
+
+  updateDemoState(num) {
+    this.handleAnimationOut(this.updateState, num);
+  }
+
+  handleAnimationOut = (updateState, num) => {
+    const dchBodyContent = document.querySelector('.dch-body-content')
+    if(dchBodyContent){
+      TweenMax.to(dchBodyContent, .3, {opacity:0, delay:0, transform:"translateY(10%)", ease: Back.easeIn.config(1.7), onComplete: updateState, onCompleteParams: [num]});
+    } else{
+      this.updateState(num)
+    }
+  }
+
+  handleAnimationIn= (delay) => {
+    let timeDelay = delay || 0;
+    const dchBodyContent = document.querySelector('.dch-body-content')
+    if(dchBodyContent){
+      TweenMax.to(dchBodyContent, .3, {opacity:1, transform: "translateY(0)", ease: Back.easeOut.config(1.7), delay:timeDelay});
+    }
   }
 
   render() {
@@ -50,7 +73,7 @@ class CommercialApp extends Component {
 
     //Render DCH
     let renderDCH = () => {
-      return ( <CommercialDCH demoState={this.state.demoState} updateDemoState={this.updateDemoState} stateName={this.state.stateName} /> );
+      return ( <CommercialDCH callAnimation={this.handleAnimationIn} demoState={this.state.demoState} updateDemoState={this.updateDemoState} stateName={this.state.stateName} /> );
     }
 
     //Decide State Header
