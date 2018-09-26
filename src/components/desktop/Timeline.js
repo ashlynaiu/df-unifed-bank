@@ -378,8 +378,8 @@ class Timeline extends Component {
                             <span><a>2 surveys sent</a></span>
                           </article>
                           <article className="slds-grid related-item">
-                            <Icon object="email" type="utility" size="x-small" />
-                            <span><a>9 emails sent</a></span>
+                            <Icon object="shield" type="utility" size="x-small" />
+                            <span><a>Verified Compliance</a></span>
                           </article>
                         </div>
                     </aside>

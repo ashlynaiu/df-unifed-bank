@@ -57,6 +57,9 @@
 .account .right {
   width: 29%; }
 
+.tearsheet .slds-modal__container {
+  max-width: 47rem; }
+
 .client-card {
   background: #ffffff;
   border-radius: 4px;

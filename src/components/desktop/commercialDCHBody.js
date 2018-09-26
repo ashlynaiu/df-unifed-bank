@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import dchQuestions from '../../images/desktop/dch-questions.png';
 import dchEinstein from '../../images/desktop/dch-einstein.png';
 import dchSummary from '../../images/desktop/dch-summary.png';
-import dchScheduled from '../../images/desktop/dch-schedule-appointment.png';
 import dchConnected from '../../images/desktop/dch-connected.png';
 import dchAppointment from '../../images/desktop/dch-appointment.png';
 
@@ -15,7 +14,6 @@ class CommercialDCHBody extends Component {
     const { callAnimation } = this.props;
     const delay = .2;
     callAnimation(delay);
-    
   }
 
   render() {
@@ -50,15 +48,7 @@ class CommercialDCHBody extends Component {
       if(demoState === 4){
         return (
           <div className="sub-right">
-            <img src={dchScheduled} alt="" onClick={() => updateDemoState(demoState)}/>
-            <img src={dchConnected} alt="" />
-          </div>
-        )
-      }
-      else if(demoState === 5) {
-        return (
-          <div className="sub-right">
-            <img src={dchAppointment} alt="" />
+            <img src={dchAppointment} alt=""/>
             <img src={dchConnected} alt="" />
           </div>
         )

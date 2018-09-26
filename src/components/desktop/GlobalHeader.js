@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
 import Icon from '../Icon';
 import header__logo from '@salesforce-ux/design-system/assets/images/logo-noname.svg';
-import avatar from '@salesforce-ux/design-system/assets/images/avatar2.jpg';
-
+import ashlyn from '../../images/desktop/ashlyn.png';
+import pam from '../../images/desktop/pam.png';
 
 
 class GlobalHeader extends Component {
   render() {
+    let renderAvatar = () => {
+      if (this.props.screen === 'home' || this.props.screen === 'wealth') {
+        return ashlyn;
+      }
+      if (this.props.screen === 'commercialAccount' || this.props.screen === 'commercialDCH') {
+        return pam;
+      }
+    }
+
     let renderHeaderImage = () => {
       let firstRowTabPresent;
       let secondRowTabPresent;
@@ -34,9 +43,9 @@ class GlobalHeader extends Component {
         // tab open showing nimbus
         // sub tab open showing nimbus
         firstRowTabPresent = true;
-        firstRowTabLabel = "Nimbus";
+        firstRowTabLabel = "Charlie's Java";
         secondRowTabPresent = true;
-        secondRowTabLabel = "Nimbus";
+        secondRowTabLabel = "Charlie's Java";
 
       }
       else if (this.props.screen === 'commercialDCH') {
@@ -44,9 +53,9 @@ class GlobalHeader extends Component {
         // sub tab open showing nimbus
         // sub tab open showing smart discovery
         firstRowTabPresent = true;
-        firstRowTabLabel = "Nimbus";
+        firstRowTabLabel = "Charlie's Java";
         secondRowTabPresent = true;
-        secondRowTabLabel = "Nimbus";
+        secondRowTabLabel = "Charlie's Java";
         thirdRowTabPresent = true;
         thirdRowTabLabel = "Smart Discovery";
         
@@ -208,7 +217,7 @@ class GlobalHeader extends Component {
                   </button>
                 </div>
                 <span className="slds-context-bar__label-action slds-context-bar__app-name">
-                  <span className="slds-truncate" title="App Name">App Name</span>
+                  <span className="slds-truncate" title="App Name">Financial Services Cloud</span>
                 </span>
               </div>
               <div className="slds-context-bar__item slds-context-bar__object-switcher slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click">
@@ -740,7 +749,7 @@ class GlobalHeader extends Component {
                   <div className="slds-dropdown-trigger slds-dropdown-trigger_click">
                     <button className="slds-button slds-global-actions__avatar slds-global-actions__item-action" title="person name" aria-haspopup="true">
                       <span className="slds-avatar slds-avatar_circle slds-avatar_medium">
-                        <img alt="Person name" src={avatar} title="User avatar" />
+                        <img alt="Person name" src={renderAvatar()} title="User avatar" />
                       </span>
                     </button>
                   </div>
