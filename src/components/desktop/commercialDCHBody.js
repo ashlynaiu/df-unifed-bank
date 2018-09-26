@@ -13,7 +13,7 @@ class CommercialDCHBody extends Component {
 
   componentDidMount(){
     const { callAnimation } = this.props;
-    const delay = .3;
+    const delay = .2;
     callAnimation(delay);
     
   }
