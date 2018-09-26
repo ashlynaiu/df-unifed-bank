@@ -133,9 +133,9 @@ class WealthApp extends Component {
         </div>
       )
     }
-
+    let demoState = this.state.demoState;
     let renderScreenState = () => {
-      let demoState = this.state.demoState;
+      
       if(demoState === 1) {
         return renderHome();
       }
@@ -150,10 +150,20 @@ class WealthApp extends Component {
       }
     }
 
+    //Decide State Header
+    let renderStateHeader = () => {
+      if(demoState === 1) {
+        return 'home';
+      }
+      else if(demoState > 1) {
+        return 'wealth';
+      }
+    }
+
     return (
       <div className={`desktop ${this.state.modal ? 'modal-background' : ''}`}>
-        <GlobalHeader screen="wealth"/>
-          <div className="desktopBody">
+        <GlobalHeader screen={renderStateHeader()}/>
+          <div className={`desktopBody ${ demoState === 1 ? 'noTabs' : ''}`}>
             {renderScreenState()}
           </div>
       </div>

@@ -38,7 +38,7 @@ class CommercialApp extends Component {
   handleAnimationOut = (updateState, num) => {
     const dchBodyContent = document.querySelector('.dch-body-content')
     if(dchBodyContent){
-      TweenMax.to(dchBodyContent, .3, {opacity:0, delay:0, transform:"translateY(10%)", ease: Back.easeIn.config(1.7), onComplete: updateState, onCompleteParams: [num]});
+      TweenMax.to(dchBodyContent, .4, {opacity:0, delay:0, transform:"translateY(10%)", ease: Back.easeIn.config(1.7), onComplete: updateState, onCompleteParams: [num]});
     } else{
       this.updateState(num)
     }
@@ -48,7 +48,7 @@ class CommercialApp extends Component {
     let timeDelay = delay || 0;
     const dchBodyContent = document.querySelector('.dch-body-content')
     if(dchBodyContent){
-      TweenMax.to(dchBodyContent, .3, {opacity:1, transform: "translateY(0)", ease: Back.easeOut.config(1.7), delay:timeDelay});
+      TweenMax.to(dchBodyContent, .4, {opacity:1, transform: "translateY(0)", ease: Back.easeOut.config(1.7), delay:timeDelay});
     }
   }
 
