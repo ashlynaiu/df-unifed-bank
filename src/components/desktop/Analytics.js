@@ -42,7 +42,7 @@ class Analytics extends Component {
     }
 
     return (
-      <div className="desktop">
+      <div className="desktop analytics">
         <img src={renderScreenState()} alt="" onClick={() => this.updateDemoState(this.state.demoState)}/>
       </div>
     );
