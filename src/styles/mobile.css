@@ -29,6 +29,7 @@
 
 .chat-response-option {
   border: 1px solid #0070D2;
+  background-color: #fff;
   border-radius: 2rem;
   padding: .5rem 1rem;
   color: #0070D2;
@@ -59,7 +60,8 @@
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
-  z-index: 2; }
+  z-index: 2;
+  cursor: pointer; }
 
 .chat-window {
   height: 100%;
