@@ -265,17 +265,17 @@ class Chat extends Component{
         <div className="chat-window">
           <section role="log" className="slds-chat">
             <ul className="slds-chat-list">
-              <ChatBubble animationClass="hidden response1 ascending" boundClass="outbound" chatLabel="I'm leaving for a business trip to Brazil on Saturday date for 10 days and would like to use my credit card"/>
+              <ChatBubble animationClass="hidden response1 ascending" boundClass="outbound" chatLabel="I'm leaving for  Brazil on Saturday for 10 days and would like to use my credit card"/>
               <ChatBubble botTyping={this.state.firstTypingBubble} animationClass="hidden loading firstTypingBubble ascending" boundClass="inbound" chatLabel="To get started let's verify your account. I sent you a 5 digit code for confirmation, enter those five digits so we can access your account."/>
               <ChatBubble animationClass="hidden response2 ascending" boundClass="outbound" chatLabel="547612"/>
-              <ChatBubble animationClass="secondTypingBubble hidden ascending" botTyping={this.state.secondTypingBubble} boundClass="inbound" chatLabel="Great! Is this for business or pleasure?"/>
+              <ChatBubble animationClass="secondTypingBubble hidden ascending" botTyping={this.state.secondTypingBubble} boundClass="inbound" chatLabel="Is this for business or pleasure?"/>
               
               <div onClick={this.handleBizOrPleasure} className="hidden-response-options ascending firstChatResponses chat-response-options slds-grid slds-grid_align-end">
                 <ChatResponseOption label="Business"/>
                 <ChatResponseOption label="Pleasure"/>
               </div>
               <ChatBubble animationClass="firstSelectedOption hidden ascending" boundClass="outbound" chatLabel="Business"/>
-              <ChatBubble animationClass="fourthTypingBubble hidden ascending" botTyping={this.state.fourthTypingBubble} boundClass="inbound" chatLabel="I've noticed that you are paying your international suppliers with checks, would you like to meet with a Relationship Manager to learn more about our Wire Transfer Service?"/>
+              <ChatBubble animationClass="fourthTypingBubble hidden ascending" botTyping={this.state.fourthTypingBubble} boundClass="inbound" chatLabel="Great! I've noticed that you are paying your international suppliers with checks, would you like to meet with a Relationship Manager to learn more about our Wire Transfer Service?"/>
               
               
               <div onClick={this.handleMeetingConfirm} className="hidden-response-options ascending secondChatResponses chat-response-options slds-grid slds-grid_align-end">
