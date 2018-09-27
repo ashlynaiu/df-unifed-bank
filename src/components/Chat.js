@@ -253,9 +253,10 @@ class Chat extends Component{
               <ChatBubble animationClass="hidden response1 ascending" boundClass="outbound" chatLabel="I'm leaving for a business trip to Brazil on Saturday date for 10 days and would like to use my credit card"/>
               <ChatBubble botTyping={this.state.firstTypingBubble} animationClass="hidden loading firstTypingBubble ascending" boundClass="inbound" chatLabel="To get started let's verify your account. I sent you a 5 digit code for confirmation, enter those five digits so we can access your account."/>
               <ChatBubble animationClass="hidden response2 ascending" boundClass="outbound" chatLabel="547612"/>
-              <ChatBubble animationClass="secondTypingBubble hidden ascending" botTyping={this.state.secondTypingBubble} boundClass="inbound" chatLabel="Great, let me review your card information."/>
-              <ChatBubble animationClass="thirdTypingBubble hidden ascending" botTyping={this.state.thirdTypingBubble} boundClass="inbound" chatLabel="I have made a note on your account and have activated Brazil for the dates specified."/>
-              <ChatBubble animationClass="fourthTypingBubble hidden ascending" botTyping={this.state.fourthTypingBubble} boundClass="inbound" chatLabel=" After reviewing the details of your account, I've noticed that you are paying your international suppliers with checks, would you like to meet with a Relationship Manager to learn more about our Wire Transfer Service?"/>
+              <ChatBubble animationClass="secondTypingBubble hidden ascending" botTyping={this.state.secondTypingBubble} boundClass="inbound" chatLabel="Great! Is this for business or pleasure?"/>
+              // Business or pleasure bubble
+              <!-- <ChatBubble animationClass="thirdTypingBubble hidden ascending" botTyping={this.state.thirdTypingBubble} boundClass="inbound" chatLabel="I have made a note on your account and have activated Brazil for the dates specified."/> -->
+              <ChatBubble animationClass="fourthTypingBubble hidden ascending" botTyping={this.state.fourthTypingBubble} boundClass="inbound" chatLabel="I've noticed that you are paying your international suppliers with checks, would you like to meet with a Relationship Manager to learn more about our Wire Transfer Service?"/>
               
               
               <div onClick={this.handleFirstClick} className="hidden-response-options ascending firstChatResponses chat-response-options slds-grid slds-grid_align-end">
