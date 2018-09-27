@@ -30,7 +30,6 @@ class Chat extends Component{
       },
       firstTypingBubble : true,
       secondTypingBubble : true,
-      thirdTypingBubble : true,
       fourthTypingBubble: true,
       fifthTypingBubble: true,
       sixthTypingBubble: true,
@@ -39,13 +38,11 @@ class Chat extends Component{
     }
   }
 
-  componentDidMount(){
+  startChatBot = () => {
     const response1 = document.querySelector('.response1');
     const firstTypingBubble = document.querySelector('.firstTypingBubble');
     const response2 = document.querySelector('.response2');
     const secondTypingBubble = document.querySelector('.secondTypingBubble');
-    const thirdTypingBubble = document.querySelector('.thirdTypingBubble');
-    const fourthTypingBubble = document.querySelector('.fourthTypingBubble');
     const firstChatResponses = document.querySelector('.firstChatResponses');
     
 
@@ -53,7 +50,7 @@ class Chat extends Component{
       "element": response1,
       "botIsTyping": false,
       "typingBotString": null,
-      "timing": 500,
+      "timing": 0,
       "fn": this.state.popChatBubbleFn
     }
     this.state.timeoutFn(config)
@@ -62,7 +59,7 @@ class Chat extends Component{
       "element": firstTypingBubble,
       "botIsTyping": true,
       "typingBotString": "firstTypingBubble",
-      "timing": 1000,
+      "timing": 500,
       "fn": this.state.popChatBubbleFn
     }
     this.state.timeoutFn(config)
@@ -71,7 +68,7 @@ class Chat extends Component{
       "element": response2,
       "botIsTyping": false,
       "typingBotString": null,
-      "timing": 4200,
+      "timing": 3700,
       "fn": this.state.popChatBubbleFn
     }
     this.state.timeoutFn(config)
@@ -80,29 +77,9 @@ class Chat extends Component{
       "element": secondTypingBubble,
       "botIsTyping": true,
       "typingBotString": "secondTypingBubble",
-      "timing": 4700,
+      "timing": 4200,
       "fn": this.state.popChatBubbleFn,
       "typingTime": 1000
-    }
-    this.state.timeoutFn(config)
-
-    config = {
-      "element": thirdTypingBubble,
-      "botIsTyping": true,
-      "typingBotString": "thirdTypingBubble",
-      "timing": 6000,
-      "fn": this.state.popChatBubbleFn,
-      "typingTime": 1000
-    }
-    this.state.timeoutFn(config)
-
-    config = {
-      "element": fourthTypingBubble,
-      "botIsTyping": true,
-      "typingBotString": "fourthTypingBubble",
-      "timing": 7000,
-      "fn": this.state.popChatBubbleFn,
-      "typingTime": 2000
     }
     this.state.timeoutFn(config)
 
@@ -110,23 +87,21 @@ class Chat extends Component{
       "element": firstChatResponses,
       "botIsTyping": false,
       "typingBotString": null,
-      "timing": 9500,
+      "timing": 5500,
       "fn": this.state.popChatBubbleFn
     }
     this.state.timeoutFn(config)
-
   }
 
-  handleFirstClick = () => {
+  handleBizOrPleasure = () => {
     const chatWindow = document.querySelector('.chat-window');
     const firstChatResponses = document.querySelector('.firstChatResponses');
+    const secondChatResponses = document.querySelector('.secondChatResponses');
     const firstSelectedOption = document.querySelector('.firstSelectedOption');
-    const fifthTypingBubble = document.querySelector('.fifthTypingBubble');
-    const abScheduler = document.querySelector('.abScheduler');
-    
+    const fourthTypingBubble = document.querySelector('.fourthTypingBubble');
 
     TweenMax.to(firstChatResponses, 0, {display:"none"});
-    TweenMax.to(chatWindow, .8, {scrollTo: 400, delay:1});
+    TweenMax.to(chatWindow, .8, {scrollTo: 210, delay:1});
     let config = {
       "element": firstSelectedOption,
       "botIsTyping": false,
@@ -136,6 +111,45 @@ class Chat extends Component{
     }
     this.state.timeoutFn(config)
 
+    config = {
+      "element": fourthTypingBubble,
+      "botIsTyping": true,
+      "typingBotString": "fourthTypingBubble",
+      "timing": 1000,
+      "fn": this.state.popChatBubbleFn,
+      "typingTime": 2000
+    }
+    this.state.timeoutFn(config)
+
+    config = {
+      "element": secondChatResponses,
+      "botIsTyping": false,
+      "typingBotString": null,
+      "timing": 3500,
+      "fn": this.state.popChatBubbleFn
+    }
+    this.state.timeoutFn(config)
+
+  }
+
+  handleMeetingConfirm = () => {
+    const chatWindow = document.querySelector('.chat-window');
+    const secondChatResponses = document.querySelector('.secondChatResponses');
+    const secondSelectedOption = document.querySelector('.secondSelectedOption');
+    const fifthTypingBubble = document.querySelector('.fifthTypingBubble');
+    const abScheduler = document.querySelector('.abScheduler');
+
+    TweenMax.to(secondChatResponses, 0, {display:"none"});
+    TweenMax.to(chatWindow, .8, {scrollTo: 370, delay:1});
+    let config = {
+      "element": secondSelectedOption,
+      "botIsTyping": false,
+      "typingBotString": null,
+      "timing": 0,
+      "fn": this.state.popChatBubbleFn
+    }
+    this.state.timeoutFn(config)
+    
     config = {
       "element": fifthTypingBubble,
       "botIsTyping": true,
@@ -161,7 +175,7 @@ class Chat extends Component{
     const selectedAppointment = document.querySelector('.selectedAppointment');
     const sixthTypingBubble = document.querySelector('.sixthTypingBubble');
     const chatBankerInfoImage = document.querySelector('.chatBankerInfoImage');
-    const secondChatResponses = document.querySelector('.secondChatResponses');
+    const thirdChatResponses = document.querySelector('.thirdChatResponses');
 
     TweenMax.to(abScheduler, 0, {display:"none"});
     selectedAppointment.querySelector('.slds-chat-message__text').textContent = event.target.textContent
@@ -193,7 +207,7 @@ class Chat extends Component{
     this.state.timeoutFn(config)
 
     config = {
-      "element": secondChatResponses,
+      "element": thirdChatResponses,
       "botIsTyping": false,
       "typingBotString": null,
       "timing": 3500,
@@ -205,13 +219,13 @@ class Chat extends Component{
 
   handleBankerConfimation = () => {
     const chatWindow = document.querySelector('.chat-window');
-    const secondChatResponses = document.querySelector('.secondChatResponses');
+    const thirdChatResponses = document.querySelector('.thirdChatResponses');
     const bankerConfimationResponse = document.querySelector('.bankerConfimationResponse');
     const seventhTypingBubble = document.querySelector('.seventhTypingBubble');
     const chatCalEventInfo = document.querySelector('.chatCalEventInfo');
 
-    TweenMax.to(secondChatResponses, 0, {display:"none"});
-    TweenMax.to(chatWindow, .8, {scrollTo: 700, delay:.5});
+    TweenMax.to(thirdChatResponses, 0, {display:"none"});
+    TweenMax.to(chatWindow, .8, {scrollTo: 670, delay:.5});
     let config = {
       "element": bankerConfimationResponse,
       "botIsTyping": false,
@@ -246,7 +260,7 @@ class Chat extends Component{
   render() {
     return (
       <div className="imessageApp">
-      <section className="toolbar-top"></section>
+      <section onClick={this.startChatBot} className="toolbar-top"></section>
         <div className="chat-window">
           <section role="log" className="slds-chat">
             <ul className="slds-chat-list">
@@ -254,18 +268,22 @@ class Chat extends Component{
               <ChatBubble botTyping={this.state.firstTypingBubble} animationClass="hidden loading firstTypingBubble ascending" boundClass="inbound" chatLabel="To get started let's verify your account. I sent you a 5 digit code for confirmation, enter those five digits so we can access your account."/>
               <ChatBubble animationClass="hidden response2 ascending" boundClass="outbound" chatLabel="547612"/>
               <ChatBubble animationClass="secondTypingBubble hidden ascending" botTyping={this.state.secondTypingBubble} boundClass="inbound" chatLabel="Great! Is this for business or pleasure?"/>
-              // Business or pleasure bubble
-              <!-- <ChatBubble animationClass="thirdTypingBubble hidden ascending" botTyping={this.state.thirdTypingBubble} boundClass="inbound" chatLabel="I have made a note on your account and have activated Brazil for the dates specified."/> -->
+              
+              <div onClick={this.handleBizOrPleasure} className="hidden-response-options ascending firstChatResponses chat-response-options slds-grid slds-grid_align-end">
+                <ChatResponseOption label="Business"/>
+                <ChatResponseOption label="Pleasure"/>
+              </div>
+              <ChatBubble animationClass="firstSelectedOption hidden ascending" boundClass="outbound" chatLabel="Business"/>
               <ChatBubble animationClass="fourthTypingBubble hidden ascending" botTyping={this.state.fourthTypingBubble} boundClass="inbound" chatLabel="I've noticed that you are paying your international suppliers with checks, would you like to meet with a Relationship Manager to learn more about our Wire Transfer Service?"/>
               
               
-              <div onClick={this.handleFirstClick} className="hidden-response-options ascending firstChatResponses chat-response-options slds-grid slds-grid_align-end">
+              <div onClick={this.handleMeetingConfirm} className="hidden-response-options ascending secondChatResponses chat-response-options slds-grid slds-grid_align-end">
                 <ChatResponseOption label="No Thanks"/>
                 <ChatResponseOption label="Sure!"/>
               </div>
               
               
-              <ChatBubble animationClass="firstSelectedOption hidden ascending" boundClass="outbound" chatLabel="Sure!"/>
+              <ChatBubble animationClass="secondSelectedOption hidden ascending" boundClass="outbound" chatLabel="Sure!"/>
               <ChatBubble animationClass="fifthTypingBubble hidden ascending" botTyping={this.state.fifthTypingBubble} boundClass="inbound" chatLabel="What date and time works best for you to meet with the relationship manager?"/>
 
               <ChatABScheduler onButtonClick={this.handleSchedulerClick} animationClass="abScheduler hidden ascending" />
@@ -275,7 +293,7 @@ class Chat extends Component{
 
               <div className="chatBankerInfoImage hidden ascending chat-banker-info-image"></div>
 
-              <div onClick={this.handleBankerConfimation} className="hidden-response-options secondChatResponses ascending chat-response-options slds-grid slds-grid_align-end">
+              <div onClick={this.handleBankerConfimation} className="hidden-response-options thirdChatResponses ascending chat-response-options slds-grid slds-grid_align-end">
                 <ChatResponseOption label="Change Banker"/>
                 <ChatResponseOption label="Sounds Good!"/>
               </div>
