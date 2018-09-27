@@ -6,6 +6,10 @@ import pam from '../../images/desktop/pam.png';
 
 
 class GlobalHeader extends Component {
+  handleChange(){
+
+  }
+
   render() {
     let renderAvatar = () => {
       if (this.props.screen === 'home' || this.props.screen === 'wealth') {
@@ -63,7 +67,7 @@ class GlobalHeader extends Component {
 
 
       let firstRowTab = <li className="slds-context-bar__item slds-context-bar__item_tab slds-is-active" role="presentation">
-                        <a href="" className="slds-context-bar__label-action" role="tab" title="Tab Item 1" aria-selected="true" tabindex="0" aria-controls="context-tab-panel-2" id="context-tab-id-2">
+                        <a href="" className="slds-context-bar__label-action" role="tab" title="Tab Item 1" aria-selected="true" tabIndex="0" aria-controls="context-tab-panel-2" id="context-tab-id-2">
                           <span className="slds-indicator-container"></span>
                           <div className="slds-icon_container icon-override-account" title="Case">
                             {/* <svg className="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
@@ -75,7 +79,7 @@ class GlobalHeader extends Component {
                           <span className="slds-truncate" title="Tab Item 1">{firstRowTabLabel}</span>
                         </a>
                         <div className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none">
-                          <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="0" title="Actions for Tab Item 1">
+                          <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabIndex="0" title="Actions for Tab Item 1">
                             {/* <svg className="slds-button__icon" aria-hidden="true">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
                             </svg> */}
@@ -85,28 +89,28 @@ class GlobalHeader extends Component {
                           <div className="slds-dropdown slds-dropdown_right">
                             <ul className="slds-dropdown__list" role="menu">
                               <li className="slds-dropdown__item" role="presentation">
-                                <a href="" role="menuitem" tabindex="-1">
+                                <a href="" role="menuitem" tabIndex="-1">
                                   <span className="slds-truncate" title="Refresh Tab">Refresh Tab</span>
                                   <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                                     <span className="slds-assistive-text">:</span>r</span>
                                 </a>
                               </li>
                               <li className="slds-dropdown__item" role="presentation">
-                                <a href="" role="menuitem" tabindex="-1">
+                                <a href="" role="menuitem" tabIndex="-1">
                                   <span className="slds-truncate" title="Open in a new window">Open in a new window</span>
                                   <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                                     <span className="slds-assistive-text">:</span>⇧ + n</span>
                                 </a>
                               </li>
                               <li className="slds-dropdown__item" role="presentation">
-                                <a href="" role="menuitem" tabindex="-1">
+                                <a href="" role="menuitem" tabIndex="-1">
                                   <span className="slds-truncate" title="Pin Tab">Pin Tab</span>
                                   <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                                     <span className="slds-assistive-text">:</span>p</span>
                                 </a>
                               </li>
                               <li className="slds-dropdown__item" role="presentation">
-                                <a href="" role="menuitem" tabindex="-1">
+                                <a href="" role="menuitem" tabIndex="-1">
                                   <span className="slds-truncate" title="Close Tab">Close Tab</span>
                                   <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                                     <span className="slds-assistive-text">:</span>w</span>
@@ -116,7 +120,7 @@ class GlobalHeader extends Component {
                           </div>
                         </div>
                         <div className="slds-context-bar__icon-action slds-col_bump-left slds-p-left_none">
-                          <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" tabindex="0" title="Close Tab Item 1">
+                          <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" tabIndex="0" title="Close Tab Item 1">
                             {/* <svg className="slds-button__icon" aria-hidden="true">
                               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
                             </svg> */}
@@ -129,7 +133,7 @@ class GlobalHeader extends Component {
 
       
       let secondRowTab = <li className="slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center slds-active" role="presentation">
-                          <a aria-controls="subtab-tabpanel-01" aria-selected="true" className="slds-tabs_default__link slds-p-horizontal_xx-small" href="" id="subtab-tabitem-01" role="tab" tabindex="0" title="00071938">
+                          <a aria-controls="subtab-tabpanel-01" aria-selected="true" className="slds-tabs_default__link slds-p-horizontal_xx-small" href="" id="subtab-tabitem-01" role="tab" tabIndex="0" title="00071938">
                             <span className="slds-indicator-container"></span>
                             <div className="slds-icon_container icon-override-account" title="Case">
                               {/* <svg className="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
@@ -141,7 +145,7 @@ class GlobalHeader extends Component {
                             <span className="slds-truncate" title="00071938">{secondRowTabLabel}</span>
                           </a>
                           <div className="slds-col_bump-left slds-p-left_none slds-p-right_none">
-                            <button className="slds-button icon-override-account slds-button_icon slds-button_icon-container slds-button_icon-x-small" tabindex="0" title="Close 00071938">
+                            <button className="slds-button icon-override-account slds-button_icon slds-button_icon-container slds-button_icon-x-small" tabIndex="0" title="Close 00071938">
                               {/* <svg className="slds-button__icon" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
                               </svg> */}
@@ -152,7 +156,7 @@ class GlobalHeader extends Component {
                         </li>
 
         let thirdRowTab = <li className="slds-tabs_default__item slds-sub-tabs__item slds-grid slds-grid_vertical-align-center slds-active" role="presentation">
-                            <a aria-controls="subtab-tabpanel-01" aria-selected="true" className="slds-tabs_default__link slds-p-horizontal_xx-small" href="" id="subtab-tabitem-01" role="tab" tabindex="0" title="00071938">
+                            <a aria-controls="subtab-tabpanel-01" aria-selected="true" className="slds-tabs_default__link slds-p-horizontal_xx-small" href="" id="subtab-tabitem-01" role="tab" tabIndex="0" title="00071938">
                               <span className="slds-indicator-container"></span>
                               <div className="slds-icon_container icon-override-account" title="Case">
                                 {/* <svg className="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
@@ -164,7 +168,7 @@ class GlobalHeader extends Component {
                               <span className="slds-truncate" title="00071938">{thirdRowTabLabel}</span>
                             </a>
                             <div className="slds-col_bump-left slds-p-left_none slds-p-right_none">
-                              <button className="slds-button icon-override-account slds-button_icon slds-button_icon-container slds-button_icon-x-small" tabindex="0" title="Close 00071938">
+                              <button className="slds-button icon-override-account slds-button_icon slds-button_icon-container slds-button_icon-x-small" tabIndex="0" title="Close 00071938">
                                 {/* <svg className="slds-button__icon" aria-hidden="true">
                                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
                                 </svg> */}
@@ -236,7 +240,7 @@ class GlobalHeader extends Component {
                 <div className="slds-dropdown slds-dropdown_right">
                   <ul className="slds-dropdown__list" role="menu">
                     <li className="slds-dropdown__item" role="presentation">
-                      <a href="" role="menuitem" tabindex="-1">
+                      <a href="" role="menuitem" tabIndex="-1">
                         {/* <span className="slds-truncate" title="[object Object],Accounts">
                           <svg className="slds-icon slds-icon_small slds-icon-standard-account slds-m-right_small" aria-hidden="true">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
@@ -247,7 +251,7 @@ class GlobalHeader extends Component {
                       </a>
                     </li>
                     <li className="slds-dropdown__item" role="presentation">
-                      <a href="" role="menuitem" tabindex="-1">
+                      <a href="" role="menuitem" tabIndex="-1">
                         {/* <span className="slds-truncate" title="[object Object],Cases">
                           <svg className="slds-icon slds-icon_small slds-icon-standard-case slds-m-right_small" aria-hidden="true">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#case" />
@@ -258,7 +262,7 @@ class GlobalHeader extends Component {
                       </a>
                     </li>
                     <li className="slds-dropdown__item" role="presentation">
-                      <a href="" role="menuitem" tabindex="-1">
+                      <a href="" role="menuitem" tabIndex="-1">
                         {/* <span className="slds-truncate" title="[object Object],Insights">
                           <svg className="slds-icon slds-icon_small slds-icon-standard-work-order slds-m-right_small" aria-hidden="true">
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#work_order" />
@@ -287,7 +291,7 @@ class GlobalHeader extends Component {
               <div className="slds-context-bar__vertical-divider"></div>
               <ul className="slds-grid" role="tablist">
                 <li className="slds-context-bar__item slds-context-bar__item_tab slds-is-pinned" role="presentation">
-                  <a href="" className="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabindex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
+                  <a href="" className="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabIndex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
                     <span className="slds-indicator-container"></span>
                     <div className="slds-icon_container" title="Home">
                       {/* <svg className="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
@@ -299,7 +303,7 @@ class GlobalHeader extends Component {
                     <span className="slds-truncate slds-assistive-text" title="Home">Home</span>
                   </a>
                   <div className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none">
-                    <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Actions for Home">
+                    <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabIndex="-1" title="Actions for Home">
                       {/* <svg className="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
                       </svg> */}
@@ -309,28 +313,28 @@ class GlobalHeader extends Component {
                     <div className="slds-dropdown slds-dropdown_right">
                       <ul className="slds-dropdown__list" role="menu">
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Refresh Tab">Refresh Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>r</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Open in a new window">Open in a new window</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>⇧ + n</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Pin Tab">Pin Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>p</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Close Tab">Close Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>w</span>
@@ -341,7 +345,7 @@ class GlobalHeader extends Component {
                   </div>
                 </li>
                 <li className="slds-context-bar__item slds-context-bar__item_tab slds-is-pinned" role="presentation">
-                  <a href="" className="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabindex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
+                  <a href="" className="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabIndex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
                     <span className="slds-indicator-container"></span>
                     <div className="slds-icon_container" title="Home">
                       {/* <svg className="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
@@ -353,7 +357,7 @@ class GlobalHeader extends Component {
                     <span className="slds-truncate slds-assistive-text" title="Home">Home</span>
                   </a>
                   <div className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none">
-                    <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Actions for Home">
+                    <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabIndex="-1" title="Actions for Home">
                       {/* <svg className="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
                       </svg> */}
@@ -363,28 +367,28 @@ class GlobalHeader extends Component {
                     <div className="slds-dropdown slds-dropdown_right">
                       <ul className="slds-dropdown__list" role="menu">
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Refresh Tab">Refresh Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>r</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Open in a new window">Open in a new window</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>⇧ + n</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Pin Tab">Pin Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>p</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Close Tab">Close Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>w</span>
@@ -395,7 +399,7 @@ class GlobalHeader extends Component {
                   </div>
                 </li>
                 <li className="slds-context-bar__item slds-context-bar__item_tab slds-is-pinned" role="presentation">
-                  <a href="" className="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabindex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
+                  <a href="" className="slds-context-bar__label-action" role="tab" title="Home" aria-selected="false" tabIndex="-1" aria-controls="context-tab-panel-1" id="context-tab-id-1">
                     <span className="slds-indicator-container"></span>
                     <div className="slds-icon_container" title="Home">
                       {/* <svg className="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
@@ -407,7 +411,7 @@ class GlobalHeader extends Component {
                     <span className="slds-truncate slds-assistive-text" title="Home">Home</span>
                   </a>
                   <div className="slds-context-bar__icon-action slds-context-bar__dropdown-trigger slds-dropdown-trigger slds-dropdown-trigger_click slds-p-left_none slds-p-right_none">
-                    <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Actions for Home">
+                    <button className="slds-button slds-button_icon slds-button_icon-container slds-button_icon-x-small" aria-haspopup="true" tabIndex="-1" title="Actions for Home">
                       {/* <svg className="slds-button__icon" aria-hidden="true">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown" />
                       </svg> */}
@@ -417,28 +421,28 @@ class GlobalHeader extends Component {
                     <div className="slds-dropdown slds-dropdown_right">
                       <ul className="slds-dropdown__list" role="menu">
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Refresh Tab">Refresh Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>r</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Open in a new window">Open in a new window</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>⇧ + n</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Pin Tab">Pin Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>p</span>
                           </a>
                         </li>
                         <li className="slds-dropdown__item" role="presentation">
-                          <a href="" role="menuitem" tabindex="-1">
+                          <a href="" role="menuitem" tabIndex="-1">
                             <span className="slds-truncate" title="Close Tab">Close Tab</span>
                             <span className="slds-text-body_small slds-text-color_weak slds-p-left_large">
                               <span className="slds-assistive-text">:</span>w</span>
@@ -466,7 +470,7 @@ class GlobalHeader extends Component {
     }
     
     return (
-      <div classNameName="header-and-nav">
+      <div className="header-and-nav">
         <header className="slds-global-header_container">
           <a href="" className="slds-assistive-text slds-assistive-text_focus">Skip to Navigation</a>
           <a href="" className="slds-assistive-text slds-assistive-text_focus">Skip to Main Content</a>
@@ -476,17 +480,17 @@ class GlobalHeader extends Component {
             </div>
             <div className="slds-global-header__item slds-global-header__item_search">
               <div className="slds-form-element">
-                <label className="slds-form-element__label slds-assistive-text" for="combobox-id-17">Search Salesforce</label>
+                <label className="slds-form-element__label slds-assistive-text" htmlFor="combobox-id-17">Search Salesforce</label>
                 <div className="slds-form-element__control">
                   <div className="slds-combobox-group">
                     <div className="slds-combobox_object-switcher slds-combobox-addon_start">
                       <div className="slds-form-element">
-                        <label className="slds-form-element__label slds-assistive-text" for="objectswitcher-combobox-id-17">Filter Search by:</label>
+                        <label className="slds-form-element__label slds-assistive-text" htmlFor="objectswitcher-combobox-id-17">Filter Search by:</label>
                         <div className="slds-form-element__control">
                           <div className="slds-combobox_container">
                             <div className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-controls="primary-search-combobox-id-1" aria-expanded="false" aria-haspopup="listbox" role="combobox">
                               <div className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                                <input type="text" className="slds-input slds-combobox__input slds-combobox__input-value" id="objectswitcher-combobox-id-17" aria-controls="objectswitcher-listbox-id-17" autoComplete="off" role="textbox" placeholder=" " value="Accounts"/>
+                                <input type="text" className="slds-input slds-combobox__input slds-combobox__input-value" id="objectswitcher-combobox-id-17" aria-controls="objectswitcher-listbox-id-17" onChange={this.handleChange} autoComplete="off" role="textbox" placeholder=" " value="Accounts"/>
                                 <span className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
                                   {/* <svg className="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
                                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
