@@ -3,6 +3,7 @@ import ChatBubble from './ChatBubble';
 import ChatResponseOption from './ChatResponseOption';
 import ChatABScheduler from './ChatABScheduler';
 import TweenMax,  { Back } from 'gsap';
+import { Link } from 'react-router-dom';
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 class Chat extends Component{
@@ -115,7 +116,7 @@ class Chat extends Component{
       "element": fourthTypingBubble,
       "botIsTyping": true,
       "typingBotString": "fourthTypingBubble",
-      "timing": 1000,
+      "timing": 500,
       "fn": this.state.popChatBubbleFn,
       "typingTime": 2000
     }
@@ -125,7 +126,7 @@ class Chat extends Component{
       "element": secondChatResponses,
       "botIsTyping": false,
       "typingBotString": null,
-      "timing": 3500,
+      "timing": 3000,
       "fn": this.state.popChatBubbleFn
     }
     this.state.timeoutFn(config)
@@ -301,8 +302,9 @@ class Chat extends Component{
               <ChatBubble animationClass="bankerConfimationResponse hidden ascending" boundClass="outbound" chatLabel="Sounds Good!"/>
               <ChatBubble animationClass="seventhTypingBubble hidden ascending" botTyping={this.state.seventhTypingBubble} boundClass="inbound" chatLabel="You're all set! See you soon."/>
 
-
-              <div className="hidden chatCalEventInfo ascending chat-cal-event-info"></div>
+              <Link to="/commercial">
+                <div className="hidden chatCalEventInfo ascending chat-cal-event-info"></div>
+              </Link>
 
             </ul>
           </section>
