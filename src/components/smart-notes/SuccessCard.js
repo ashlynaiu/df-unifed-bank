@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
-
+import TweenMax,  { Back } from 'gsap';
 import Opportunity from '../../images/smart-note/success-opportunity.png';
 import Household from '../../images/smart-note/success-household.png';
 import Goal from '../../images/smart-note/success-goal.png';
@@ -16,8 +15,13 @@ class SuccessCard extends Component {
       in: false
     }
   }
-  hideCard() {
-    this.setState({ in: true });
+  hideCard(event) {
+    TweenMax.to(event.currentTarget, .4, {opacity:0, height: 0 , margin: 0, ease: Back.easeIn.config(1)});
+    TweenMax.delayedCall(.4, this.setActiveFalse);
+  }
+
+  setActiveFalse = () => {
+    this.setState({ active: false })
   }
 
   render() {
@@ -40,20 +44,9 @@ class SuccessCard extends Component {
       }
     }
     return (
-      <CSSTransition
-        in={this.state.in}
-        timeout={300}
-        classNames="fade"
-        onEntered={() => {
-          this.setState({
-            active: false
-          });
-        }}
-      >
-        <div className={`successCards ${this.state.active ? '' : 'hide-card'}`} onClick={() => this.hideCard()}>
+        <div className={`successCards ${this.state.active ? '' : 'hide-card'}`} onClick={(event) => this.hideCard(event)}>
             {chooseImage()}
         </div>
-      </CSSTransition>
     );
   }
 }
