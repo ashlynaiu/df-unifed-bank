@@ -490,7 +490,7 @@ class GlobalHeader extends Component {
                           <div className="slds-combobox_container">
                             <div className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-controls="primary-search-combobox-id-1" aria-expanded="false" aria-haspopup="listbox" role="combobox">
                               <div className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
-                                <input type="text" className="slds-input slds-combobox__input slds-combobox__input-value" id="objectswitcher-combobox-id-17" aria-controls="objectswitcher-listbox-id-17" onChange={this.handleChange} autoComplete="off" role="textbox" placeholder=" " value="Accounts"/>
+                                <input type="text" className="slds-input slds-combobox__input slds-combobox__input-value" id="objectswitcher-combobox-id-17" aria-controls="objectswitcher-listbox-id-17" onChange={this.handleChange} autoComplete="off" placeholder=" " value="Accounts"/>
                                 <span className="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
                                   {/* <svg className="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
                                     <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
@@ -506,7 +506,7 @@ class GlobalHeader extends Component {
                                     </div>
                                   </li>
                                   <li role="presentation" className="slds-listbox__item">
-                                    <div id="object1" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected" role="option">
+                                    <div id="object1" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected" role="option" aria-selected="false">
                                       <span className="slds-media__figure slds-listbox__option-icon">
                                         <span className="slds-icon_container slds-icon-utility-check slds-current-color">
                                           {/* <svg className="slds-icon slds-icon_x-small" aria-hidden="true">
@@ -522,7 +522,7 @@ class GlobalHeader extends Component {
                                     </div>
                                   </li>
                                   <li role="presentation" className="slds-listbox__item">
-                                    <div id="object2" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                    <div id="object2" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option" aria-selected="false">
                                       <span className="slds-media__figure slds-listbox__option-icon"></span>
                                       <span className="slds-media__body">
                                         <span className="slds-truncate" title="Reports"> Reports</span>
@@ -530,7 +530,7 @@ class GlobalHeader extends Component {
                                     </div>
                                   </li>
                                   <li role="presentation" className="slds-listbox__item">
-                                    <div id="object3" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                    <div id="object3" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option" aria-selected="false">
                                       <span className="slds-media__figure slds-listbox__option-icon"></span>
                                       <span className="slds-media__body">
                                         <span className="slds-truncate" title="Contacts"> Contacts</span>
@@ -538,7 +538,7 @@ class GlobalHeader extends Component {
                                     </div>
                                   </li>
                                   <li role="presentation" className="slds-listbox__item">
-                                    <div id="object4" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                    <div id="object4" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option" aria-selected="false">
                                       <span className="slds-media__figure slds-listbox__option-icon"></span>
                                       <span className="slds-media__body">
                                         <span className="slds-truncate" title="Files"> Files</span>
@@ -546,7 +546,7 @@ class GlobalHeader extends Component {
                                     </div>
                                   </li>
                                   <li role="presentation" className="slds-listbox__item">
-                                    <div id="object5" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                    <div id="object5" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option" aria-selected="false">
                                       <span className="slds-media__figure slds-listbox__option-icon"></span>
                                       <span className="slds-media__body">
                                         <span className="slds-truncate" title="Groups"> Groups</span>
@@ -554,7 +554,7 @@ class GlobalHeader extends Component {
                                     </div>
                                   </li>
                                   <li role="presentation" className="slds-listbox__item">
-                                    <div id="object6" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                    <div id="object6" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option" aria-selected="false">
                                       <span className="slds-media__figure slds-listbox__option-icon"></span>
                                       <span className="slds-media__body">
                                         <span className="slds-truncate" title="Leads"> Leads</span>
@@ -562,7 +562,7 @@ class GlobalHeader extends Component {
                                     </div>
                                   </li>
                                   <li role="presentation" className="slds-listbox__item">
-                                    <div id="object7" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option">
+                                    <div id="object7" className="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small" role="option" aria-selected="false">
                                       <span className="slds-media__figure slds-listbox__option-icon"></span>
                                       <span className="slds-media__body">
                                         <span className="slds-truncate" title="Notes"> Notes</span>
@@ -577,7 +577,7 @@ class GlobalHeader extends Component {
                       </div>
                     </div>
                     <div className="slds-combobox_container slds-combobox-addon_end">
-                      <div className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" id="primary-search-combobox-id-1" role="combobox">
+                      <div className="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" id="primary-search-combobox-id-1" role="combobox" aria-controls="">
                         <div className="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left slds-global-search__form-element" role="none">
                           <span className="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_left">
                             {/* <svg className="slds-icon slds-icon slds-icon_xx-small slds-icon-text-default" aria-hidden="true">
@@ -585,7 +585,7 @@ class GlobalHeader extends Component {
                             </svg> */}
                             <Icon object="search" type="utility" size="x-small" />
                           </span>
-                          <input type="text" className="slds-input slds-combobox__input" id="combobox-id-17" aria-autocomplete="list" aria-controls="search-listbox-id-1" autoComplete="off" role="textbox" placeholder="Search Salesforce" />
+                          <input type="text" className="slds-input slds-combobox__input" id="combobox-id-17" aria-autocomplete="list" aria-controls="search-listbox-id-1" autoComplete="off"  placeholder="Search Salesforce" />
                         </div>
                         <div id="search-listbox-id-1" className="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
                           <ul className="slds-listbox slds-listbox_vertical" role="group" aria-label="Recent Items">
@@ -595,7 +595,7 @@ class GlobalHeader extends Component {
                               </div>
                             </li>
                             <li role="presentation" className="slds-listbox__item">
-                              <div id="option1" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <div id="option1" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option" aria-selected="false">
                                 <span className="slds-media__figure slds-listbox__option-icon">
                                   <span className="slds-icon_container slds-icon-standard-opportunity">
                                     {/* <svg className="slds-icon slds-icon_small" aria-hidden="true">
@@ -611,7 +611,7 @@ class GlobalHeader extends Component {
                               </div>
                             </li>
                             <li role="presentation" className="slds-listbox__item">
-                              <div id="option2" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <div id="option2" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option" aria-selected="false">
                                 <span className="slds-media__figure slds-listbox__option-icon">
                                   <span className="slds-icon_container slds-icon-standard-contact">
                                     {/* <svg className="slds-icon slds-icon_small" aria-hidden="true">
@@ -627,7 +627,7 @@ class GlobalHeader extends Component {
                               </div>
                             </li>
                             <li role="presentation" className="slds-listbox__item">
-                              <div id="option3" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <div id="option3" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option" aria-selected="false">
                                 <span className="slds-media__figure slds-listbox__option-icon">
                                   <span className="slds-icon_container slds-icon-standard-account">
                                     {/* <svg className="slds-icon slds-icon_small" aria-hidden="true">
@@ -643,7 +643,7 @@ class GlobalHeader extends Component {
                               </div>
                             </li>
                             <li role="presentation" className="slds-listbox__item">
-                              <div id="option4" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <div id="option4" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option" aria-selected="false">
                                 <span className="slds-media__figure slds-listbox__option-icon">
                                   <span className="slds-icon_container slds-icon-standard-event">
                                     {/* <svg className="slds-icon slds-icon_small" aria-hidden="true">
@@ -659,7 +659,7 @@ class GlobalHeader extends Component {
                               </div>
                             </li>
                             <li role="presentation" className="slds-listbox__item">
-                              <div id="option5" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                              <div id="option5" className="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option" aria-selected="false">
                                 <span className="slds-media__figure slds-listbox__option-icon">
                                   <span className="slds-icon_container slds-icon-standard-lead">
                                     {/* <svg className="slds-icon slds-icon_small" aria-hidden="true">
