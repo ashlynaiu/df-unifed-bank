@@ -4,6 +4,7 @@ import ChatResponseOption from './ChatResponseOption';
 import ChatABScheduler from './ChatABScheduler';
 import TweenMax,  { Back } from 'gsap';
 import { Link } from 'react-router-dom';
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 
 class Chat extends Component{
   constructor(props) {
